@@ -4,8 +4,9 @@ import "../styles/root.less";
 import Footer from "../layouts/Footer/Footer.astro";
 import HomeEnquireLayout from "../layouts/Homepage/HomeEnquireLayout/HomeEnquireLayout.astro";
 import dirtImage from "../assets/images/grain-white-1200-opac18.png";
+const { i18nextLang } = Astro.props; 
 ---
-<html lang="en">
+<html lang={i18nextLang}>
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />

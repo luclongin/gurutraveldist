@@ -1,0 +1,21 @@
+{
+    "common": {
+		"about": "about",
+		"team": "team",
+		"our story": "our story",
+		"gallery": "gallery",
+		"expeditions": "expeditions",
+		"popular-climbs": "popular climbs",
+		"popular-treks": "popular treks",
+		"all-climbs-and-treks": "all climbs and treks",
+		"enquire": "enquire",
+		"contact-information": "contact information",
+		"monday": "monday",
+		"friday": "friday",
+		"saturday": "saturday",
+		"sunday": "sunday",
+		"phone": "phone",
+		"email": "email",
+        "home": "home"
+	}
+}

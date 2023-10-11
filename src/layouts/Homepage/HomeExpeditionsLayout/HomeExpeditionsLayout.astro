@@ -1,6 +1,7 @@
 ---
 import "./HomeExpeditionsLayout.less";
 import HomeExpedGallery from "../../../components/HomeExpedGallery/HomeExpedGallery.astro";
+import { t } from "i18next";
 ---
 <!-- ============================================ -->
 <!--       Homepage - Expeditions Section         -->
@@ -8,16 +9,16 @@ import HomeExpedGallery from "../../../components/HomeExpedGallery/HomeExpedGall
 <section id="exped-section">
 	<div class="container">
 		<div class="content">
-			<span class="topper">Expeditions</span>
-			<h2 class="section-title title exped-title">Popular offers</h2>
+			<span class="topper">{t("homepage:homepage.expeditions-section.topper")}</span>
+			<h2 class="section-title title exped-title">{t("homepage:homepage.expeditions-section.title")}</h2>
 			<h3 class="section-subtitle subtitle">
-				Discover our multi-day treks, climbing expeditions and more
+				{t("homepage:homepage.expeditions-section.subtitle")}
 			</h3>
 		</div>
 		<HomeExpedGallery />
 		<div class="content">
-			<p class="subtitle">Discover everything huaraz has to offer</p>
-			<a href="/expeditions" class="solid-btn exped-section-btn">View all Treks and Climbs</a>
+			<p class="subtitle">{t("homepage:homepage.expeditions-section.text")}</p>
+			<a href="/expeditions" class="solid-btn exped-section-btn">{t("homepage:homepage.expeditions-section.cta-btn-text")}</a>
 		</div>
 	</div>
 </section>

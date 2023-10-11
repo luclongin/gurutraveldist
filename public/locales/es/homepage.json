@@ -1,0 +1,55 @@
+{
+	"homepage": {
+		"hero-title-1": "Descubre Perú",
+		"hero-title-2": "de una manera completamente nueva",
+		"about-section": {
+			"topper": "Quiénes somos",
+			"title": "De los Sueños a las Cumbres",
+			"text": "Embárcate en aventuras andinas con Guru Travel. 5 años de experiencia, más de 3000 clientes satisfechos. Guías expertos aseguran conquistas seguras en las cumbres, creando recuerdos inolvidables en Huaraz, Perú.<br />Tu viaje comienza ahora.",
+			"stat-1": "guías de montaña de clase mundial",
+			"stat-2": "años de experiencia combinada",
+			"stat-3": "alpinistas felices",
+			"cta-btn-text": "Más información"
+		},
+		"expeditions-section": {
+			"topper": "Expediciones",
+			"title": "Ofertas Populares",
+			"subtitle": "Descubre nuestras caminatas de varios días, expediciones de escalada y más",
+			"exped-1-title": "Trek de Santa Cruz",
+			"exped-2-title": "Cumbre de Alpamayo",
+			"exped-3-title": "Montaña Pisco",
+			"exped-4-title": "Circuito Huayhuash",
+			"text": "Descubre todo lo que Huaraz tiene para ofrecer",
+			"cta-btn-text": "Ver todas las Caminatas y Escaladas"
+		},
+		"reviews-section": {
+			"topper": "Opiniones",
+			"title": "Éxito medido en sonrisas",
+			"reviews": {
+				"review-1": {
+					"author": "Jake Shelton",
+					"author-exped": "Circuito Huayhuash",
+					"author-date": "mayo de 2023",
+					"text": "¡Asombroso! Los guías fueron muy amables y atentos a nuestras necesidades. De todos los guías turísticos que encontramos, ¡definitivamente recomendaría a Diego y su equipo!"
+				},
+				"review-2": {
+					"author": "Stephanie Liveranie",
+					"author-exped": "Montaña Pisco",
+					"author-date": "septiembre de 2023",
+					"text": "¡Increíble! Diego y su equipo se destacaron entre los guías turísticos, mostrando una notable amabilidad y atención a nuestros requisitos. Los recomiendo de todo corazón."
+				},
+				"review-3": {
+					"author": "Juan Huaman",
+					"author-exped": "Cumbre de Alpamayo",
+					"author-date": "junio de 2023",
+					"text": "Absolutamente asombroso! Diego y su equipo realmente se destacaron entre los guías turísticos, demostrando una amabilidad excepcional y una gran atención a nuestras necesidades. ¡Los recomiendo con entusiasmo!"
+				}
+			}
+		},
+		"gallery-section": {
+			"topper": "Galería",
+			"title": "Ayudamos a capturar recuerdos inolvidables",
+			"cta-btn-text": "Ver Galería"
+		}
+	}
+}

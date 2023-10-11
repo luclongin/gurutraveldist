@@ -11,7 +11,7 @@ import Climb4Img from "../../../assets/images/climb-4.jpg";
 import Trek1Img from "../../../assets/images/trek-1.jpg";
 import Trek2Img from "../../../assets/images/trek-2.jpg";
 import Trek3Img from "../../../assets/images/trek-3.jpg";
-import Trek4Img from "../../../assets/images/trek-4.jpg";
+import { t } from "i18next";
 ---
 <!-- ============================================ -->
 <!--           Homepage - Gallery Section         -->
@@ -200,11 +200,11 @@ import Trek4Img from "../../../assets/images/trek-4.jpg";
             </picture>
         </div>
         <div class="content">
-            <span class="topper">Gallery</span>
+            <span class="topper">{t("homepage:homepage.gallery-section.topper")}</span>
             <h2 class="section-title title gallery-title">
-                We help capture unforgettable memories
+                {t("homepage:homepage.gallery-section.title")}
             </h2>
-            <a href="/gallery" class="solid-btn gallery-section-btn">View Gallery</a>
+            <a href="/gallery" class="solid-btn gallery-section-btn">{t("homepage:homepage.gallery-section.cta-btn-text")}</a>
         </div>
     </div>
 </section>

@@ -1,9 +1,12 @@
 ---
+import { changeLanguage } from "i18next";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HeroLayout from "../layouts/HeroLayout/HeroLayout.astro";
 import GalleryLayout from "../layouts/GalleryLayout/GalleryLayout.astro";
 import GalleryImgMobile from "../assets/images/hero/gallery-img-m.jpg";
 import GalleryImg from "../assets/images/hero/gallery-img.jpg";
+
+changeLanguage("en");
 ---
 <BaseLayout>
 	<HeroLayout

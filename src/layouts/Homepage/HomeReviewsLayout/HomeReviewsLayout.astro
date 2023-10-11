@@ -5,8 +5,7 @@ import Img1Mobile from "../../../assets/images/hero/austin-ban-juHayWuaaoQ-unspl
 import Img2 from "../../../assets/images/hero/tiago-rosado-cMG5qjpnsyg-unsplash.webp";
 import Img2Mobile from "../../../assets/images/hero/tiago-rosado-cMG5qjpnsyg-unsplash-m.webp";
 import Img3 from "../../../assets/images/what-we-offer.jpg";
-
-
+import { t } from "i18next";
 import HomeCarousel from '../../../components/HomeCarousel/HomeCarousel.astro';
 ---
 <!-- ============================================ -->
@@ -15,9 +14,9 @@ import HomeCarousel from '../../../components/HomeCarousel/HomeCarousel.astro';
 <section id="reviews-section">
 	<div class="container">
 		<div class="content">
-			<span class="topper">Reviews</span>
+			<span class="topper">{t("homepage:homepage.reviews-section.topper")}</span>
 			<h2 class="section-title title reviews-title">
-				Success measured in smiles
+				{t("homepage:homepage.reviews-section.title")}
 			</h2>
 		</div>
         <div class="reviews-images-container">

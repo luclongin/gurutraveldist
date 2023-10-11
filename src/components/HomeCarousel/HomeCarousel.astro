@@ -1,13 +1,32 @@
 ---
 import UserReviewWithQuotes from '../UserReviewWithQuotes/UserReviewWithQuotes.astro';
 import ReactCarousel from './ReactCarousel.jsx';
+import { t } from "i18next";
 ---
 <!-- Hydrating Carousel with Swiper Library written in React and passing Astro children to it -->
 <ReactCarousel client:visible>
 	<!-- Slot here allows the insertion of Astro components to the React component 
 	     if a new review is added, the React component needs to be updated to accomodate it
 	-->
-	<UserReviewWithQuotes slot="review1" clientName="Jake Shelton" clientExpedition="Huayhuash Circuit" clientDate="May 2023" reviewText="Amazing! The guides were so kind and attentive to our needs. Out of all the tour guides we found, I'd definitely recommend Diego and his team!"/>
-	<UserReviewWithQuotes slot="review2" clientName="Stephanie Liveranie" clientExpedition="Pisco Mountain" clientDate="September 2023" reviewText="Incredible! Diego and his team stood out among the tour guides, displaying remarkable kindness and attentiveness to our requirements. I wholeheartedly endorse them."/>
-	<UserReviewWithQuotes slot="review3" clientName="Juan Huaman" clientExpedition="Alpamayo Summit" clientDate="June 2023" reviewText="Absolutely amazing! Diego and his team truly distinguished themselves among the tour guides, demonstrating exceptional kindness and a keen focus on our needs. I enthusiastically recommend them."/>
+	<UserReviewWithQuotes 
+		slot="review1" 
+		clientName={t("homepage:homepage.reviews-section.reviews.review-1.author")} 
+		clientExpedition={t("homepage:homepage.reviews-section.reviews.review-1.author-exped")} 
+		clientDate={t("homepage:homepage.reviews-section.reviews.review-1.author-date")} 
+		reviewText={t("homepage:homepage.reviews-section.reviews.review-1.text")} 
+	/>
+	<UserReviewWithQuotes 
+		slot="review2" 
+		clientName={t("homepage:homepage.reviews-section.reviews.review-2.author")} 
+		clientExpedition={t("homepage:homepage.reviews-section.reviews.review-2.author-exped")} 
+		clientDate={t("homepage:homepage.reviews-section.reviews.review-2.author-date")} 
+		reviewText={t("homepage:homepage.reviews-section.reviews.review-2.text")} 
+	/>
+	<UserReviewWithQuotes 
+		slot="review3" 
+		clientName={t("homepage:homepage.reviews-section.reviews.review-3.author")} 
+		clientExpedition={t("homepage:homepage.reviews-section.reviews.review-3.author-exped")} 
+		clientDate={t("homepage:homepage.reviews-section.reviews.review-3.author-date")} 
+		reviewText={t("homepage:homepage.reviews-section.reviews.review-3.text")} 
+	/>
 </ReactCarousel>

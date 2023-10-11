@@ -1,0 +1,22 @@
+---
+import { changeLanguage } from "i18next";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroLayout from "../../layouts/HeroLayout/HeroLayout.astro";
+import AboutDetails from "../../layouts/About/AboutDetailsLayout/AboutDetails.astro";
+import AboutTeamLayout from "../../layouts/About/AboutTeamLayout/AboutTeamLayout.astro";
+import AboutImg from "../../assets/images/hero/frantisek-duris-KgFSDHXFSrw-unsplash.jpg";
+import AboutImgMobile from "../../assets/images/hero/frantisek-duris-KgFSDHXFSrw-unsplash-m.jpg";
+
+changeLanguage("es");
+---
+<BaseLayout>
+    <HeroLayout
+		heroSection="about"
+		heroTitle1="Discover our story."
+		heroTitle2="Meet your guides."
+		heroImg={AboutImg}
+		heroImgMobile={AboutImgMobile}
+	/>
+    <AboutDetails />
+    <AboutTeamLayout />
+</BaseLayout>

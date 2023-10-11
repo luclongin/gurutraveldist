@@ -1,9 +1,12 @@
 ---
+import { changeLanguage } from "i18next";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HeroLayout from "../layouts/HeroLayout/HeroLayout.astro";
 import AllExpeditionsLayout from "../layouts/Expeditions/AllExpeditionsLayout/AllExpeditionsLayout.astro";
 import ExpedImg from "../assets/images/hero/austin-ban-juHayWuaaoQ-unsplash.webp";
 import ExpedImgMobile from "../assets/images/hero/austin-ban-juHayWuaaoQ-unsplash-m.webp";
+
+changeLanguage("en");
 ---
 <BaseLayout>
 	<HeroLayout

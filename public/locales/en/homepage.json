@@ -1,0 +1,55 @@
+{
+	"homepage": {
+		"hero-title-1": "Discover Peru",
+		"hero-title-2": "in a whole new way",
+		"about-section": {
+			"topper": "Who we are",
+			"title": "From Dreams to Summits",
+			"text": "Embark on Andean adventures with Guru Travel. 5 years of experience, 3000+ satisfied clients. Expert guides ensure safe peak conquests, crafting unforgettable memories in Huaraz, Per&uacute;.<br />Your journey starts now.",
+			"stat-1": "world-class mountain guides",
+			"stat-2": "years of combined experience",
+			"stat-3": "happy climbers",
+			"cta-btn-text": "Learn More"
+		},
+		"expeditions-section": {
+			"topper": "Expeditions",
+			"title": "Popular Offers",
+			"subtitle": "Discover our multi-day treks, climbing expeditions and more",
+			"exped-1-title": "Santa Cruz Trek",
+			"exped-2-title": "Alpamayo Summit",
+			"exped-3-title": "Pisco Mountain",
+			"exped-4-title": "Huayhuash Circuit",
+			"text": "Discover everything huaraz has to offer",
+			"cta-btn-text": "View all Treks and Climbs"
+		},
+		"reviews-section": {
+			"topper": "Reviews",
+			"title": "Success measured in smiles",
+			"reviews": {
+				"review-1": {
+					"author": "Jake Shelton",
+					"author-exped": "Huayhuash Circuit",
+					"author-date": "May 2023",
+					"text": "Amazing! The guides were so kind and attentive to our needs. Out of all the tour guides we found, I'd definitely recommend Diego and his team!"
+				},
+				"review-2": {
+					"author": "Stephanie Liveranie",
+					"author-exped": "Pisco Mountain",
+					"author-date": "September 2023",
+					"text": "Incredible! Diego and his team stood out among the tour guides, displaying remarkable kindness and attentiveness to our requirements. I wholeheartedly endorse them."
+				},
+				"review-3": {
+					"author": "Juan Huaman",
+					"author-exped": "Alpamayo Summit",
+					"author-date": "June 2023",
+					"text": "Absolutely amazing! Diego and his team truly distinguished themselves among the tour guides, demonstrating exceptional kindness and a keen focus on our needs. I enthusiastically recommend them."
+				}
+			}
+		},
+		"gallery-section": {
+			"topper": "Gallery",
+			"title": "We help capture unforgettable memories",
+			"cta-btn-text": "View Gallery"
+		}
+	}
+}

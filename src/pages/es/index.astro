@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroLayout from "../../layouts/HeroLayout/HeroLayout.astro";
+import HomeAboutLayout from "../../layouts/Homepage/HomeAboutLayout/HomeAboutLayout.astro";
+import HomeExpeditionsLayout from "../../layouts/Homepage/HomeExpeditionsLayout/HomeExpeditionsLayout.astro";
+import HomeReviewsLayout from "../../layouts/Homepage/HomeReviewsLayout/HomeReviewsLayout.astro";
+import HomeGalleryLayout from "../../layouts/Homepage/HomeGalleryLayout/HomeGalleryLayout.astro";
+import HomepageImg from "../../assets/images/hero/sylvain-mauroux-OIuzDRYA3cw-unsplash.jpg";
+import HomepageImgMobile from "../../assets/images/hero/sylvain-mauroux-OIuzDRYA3cw-unsplash-m.jpg";
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
+
+changeLanguage("es");
+---
+<BaseLayout i18nextLang={i18next.language}>
+	<HeroLayout
+		heroSection="homepage"
+		heroTitle1={t("homepage:homepage.hero-title-1")}
+		heroTitle2={t("homepage:homepage.hero-title-2")}
+		heroImg={HomepageImg}
+		heroImgMobile={HomepageImgMobile}
+	/>
+	<div class="background-overlay-diamond-right">
+		<HomeAboutLayout />
+		<HomeExpeditionsLayout />
+	</div>
+	<HomeReviewsLayout />		
+	<div class="background-overlay-diamond-right-strong">
+		<HomeGalleryLayout />
+	</div>
+</BaseLayout>
