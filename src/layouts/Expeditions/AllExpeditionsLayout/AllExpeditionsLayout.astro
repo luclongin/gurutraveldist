@@ -1,0 +1,139 @@
+---
+import "./AllExpeditionsLayout.less";
+import ExpeditionCard from "../../../components/ExpeditionCard/ExpeditionCard.astro";
+import SeeAllButton from "../../../components/SeeAllButton/SeeAllButton.astro";
+import SeeLessButton from "../../../components/SeeLessButton/SeeLessButton.astro";
+
+import { allClimbs, extraClimbs, allTreks, extraTreks } from "../../../assets/data/allServices.js";
+
+import climb1Img from "../../../assets/images/climb-1.jpg";
+import climb2Img from "../../../assets/images/climb-2.jpg";
+import climb3Img from "../../../assets/images/climb-3.jpg";
+import climb4Img from "../../../assets/images/climb-4.jpg";
+
+const climbImgDict = {
+	1: {default: climb1Img, mobile: climb1Img},
+	2: {default: climb3Img, mobile: climb3Img},
+	3: {default: climb2Img, mobile: climb2Img},
+	4: {default: climb4Img, mobile: climb4Img},
+	5: {default: climb1Img, mobile: climb1Img},
+	6: {default: climb3Img, mobile: climb3Img},
+	7: {default: climb2Img, mobile: climb2Img},
+	8: {default: climb4Img, mobile: climb4Img},
+	9: {default: climb3Img, mobile: climb3Img}
+};
+
+import trek1Img from "../../../assets/images/trek-1.jpg";
+import trek2Img from "../../../assets/images/trek-2.jpg";
+import trek3Img from "../../../assets/images/trek-3.jpg";
+
+const trekImgDict = {
+	1: {default: trek1Img, mobile: trek1Img},
+	2: {default: trek2Img, mobile: trek2Img},
+	3: {default: trek1Img, mobile: trek1Img},
+	4: {default: trek3Img, mobile: trek3Img},
+	5: {default: trek1Img, mobile: trek1Img},
+	6: {default: trek1Img, mobile: trek1Img},
+	7: {default: trek2Img, mobile: trek2Img},
+	8: {default: trek3Img, mobile: trek3Img},
+	9: {default: trek2Img, mobile: trek2Img}
+};
+---
+<section class="all-expeditions-section">
+    <div class="container">
+        <div class="all-expetitions-container">
+            <div class="content">
+                <span class="topper">all climbs & expeditions</span>
+                <h2 class="section-title title gallery-title">
+                    epic climbs. epic views.
+                </h2>
+            </div>
+            {
+                allClimbs.map((climb) => 
+                    <ExpeditionCard 
+                        id={climb.id} 
+                        type={climb.type}
+                        name={climb.name}
+                        difficulty={climb.difficulty}
+                        altitude={climb.altitude}
+                        duration={climb.duration}
+                        description={climb.description}
+                        mobileImg={climbImgDict[climb.id].mobile.src}
+                        defaultImg={climbImgDict[climb.id].default.src}
+                        url={climb.url}
+                    />
+                )
+            }
+            <SeeAllButton seeAllText="See All climbs & expeditions" type="climbs"/>
+            <div id="extra-climbs-container" class="all-expetitions-container">
+                {
+                    extraClimbs.map((climb) => 
+                        <ExpeditionCard 
+                            id={climb.id} 
+                            type={climb.type}
+                            name={climb.name}
+                            difficulty={climb.difficulty}
+                            altitude={climb.altitude}
+                            duration={climb.duration}
+                            description={climb.description}
+                            mobileImg={climbImgDict[climb.id].mobile.src}
+                            defaultImg={climbImgDict[climb.id].default.src}
+                            hidden={false}
+                            url={climb.url}
+                        />
+                    )
+                }
+            </div>
+            <SeeLessButton seeLessText="See less" type="climbs"/>
+        </div>
+    </div>
+</section>
+<section class="all-expeditions-section">
+    <div class="container">
+        <div class="all-expetitions-container">
+            <div class="content trek-content">
+                <span class="topper">all treks & day hikes</span>
+                <h2 class="section-title title gallery-title">
+                    Step into the Wild.
+                </h2>
+            </div>
+            {
+                allTreks.map(trek => 
+                    <ExpeditionCard 
+                        id={trek.id}
+                        type={trek.type} 
+                        name={trek.name}
+                        difficulty={trek.difficulty}
+                        altitude={trek.altitude}
+                        duration={trek.duration}
+                        description={trek.description}
+                        mobileImg={trekImgDict[trek.id].mobile.src}
+                        defaultImg={trekImgDict[trek.id].default.src}
+                        url={trek.url}
+                    />
+                )
+            }
+            <SeeAllButton seeAllText="See All Treks & Hikes" type="treks"/>
+            <div id="extra-treks-container" class="all-expetitions-container">
+                {
+                    extraTreks.map((trek) => 
+                        <ExpeditionCard 
+                            id={trek.id} 
+                            type={trek.type}
+                            name={trek.name}
+                            difficulty={trek.difficulty}
+                            altitude={trek.altitude}
+                            duration={trek.duration}
+                            description={trek.description}
+                            mobileImg={trekImgDict[trek.id].mobile.src}
+                            defaultImg={trekImgDict[trek.id].default.src}
+                            hidden={false}
+                            url={trek.url}
+                        />
+                    )
+                }
+            </div>
+            <SeeLessButton seeLessText="See less" type="treks"/>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,33 @@
+---
+import "./ExpeditionDetailsLayout.less";
+import BaseLayout from "../../BaseLayout.astro";
+import HeroLayout from "../../HeroLayout/HeroLayout.astro";
+import ExpeditionDetailsSideBar from "../../../components/ExpeditionDetailsSideBar/ExpeditionDetailsSideBar.astro";
+import ExpeditionDetailsOverview from "./ExpeditionDetailsOverview/ExpeditionDetailsOverview.astro";
+import ExpeditionDetailsIncluded from "./ExpeditionDetailsIncluded/ExpeditionDetailsIncluded.astro";
+import ExpeditionDetailsItinerary from "./ExpeditionDetailsItinerary/ExpeditionDetailsItinerary.astro";
+import ExpeditionDetailsCost from "./ExpeditionDetailsCost/ExpeditionDetailsCost.astro";
+import ExpeditionDetailsGallery from "./ExpeditionDetailsGallery/ExpeditionDetailsGallery.astro";
+import ExpedImg from "../../../assets/images/hero/austin-ban-juHayWuaaoQ-unsplash.webp";
+import ExpedImgMobile from "../../../assets/images/hero/austin-ban-juHayWuaaoQ-unsplash-m.webp";
+const { frontmatter } = Astro.props;
+---
+<BaseLayout>
+    <HeroLayout
+		heroSection="huayhuash-circuit"
+		heroTitle1="Huayhuash Circuit"
+		heroTitle2="Trek"
+		heroImg={ExpedImg}
+		heroImgMobile={ExpedImgMobile}
+	/>
+	<section id="exped-details-container">
+		<ExpeditionDetailsSideBar />
+		<section id="exped-details-sections-container">
+			<ExpeditionDetailsOverview frontmatter={frontmatter} />
+			<ExpeditionDetailsIncluded frontmatter={frontmatter} />
+			<ExpeditionDetailsItinerary frontmatter={frontmatter} />
+			<ExpeditionDetailsCost frontmatter={frontmatter} />
+			<ExpeditionDetailsGallery frontmatter={frontmatter} />
+		</section>
+	</section>
+</BaseLayout>

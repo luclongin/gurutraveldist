@@ -1,0 +1,110 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	.exped-details-section {
+		padding: var(--sectionPadding);
+		padding-top: 0rem;
+
+		.container {
+			width: 100%;
+			align-items: flex-start;
+			max-width: (550/16rem);
+		}
+
+		.exped-details-section-title {
+			font-size: var(--subheaderFontSize);
+			text-transform: uppercase;
+			letter-spacing: (2/16rem);
+			margin: 1rem 0;
+			width: 100%;
+		}
+	}
+
+	#exped-details-select {
+		position: relative;
+		z-index: 1;
+		padding: var(--sectionPadding);
+	}
+
+	.select-dropdown-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		max-width: (400/16rem);
+
+		label {
+			width: 90%;
+		}
+	}
+}
+
+/* Tablet - 736px */
+@media only screen and (min-width: 46rem) {
+	.exped-details-section {
+		.container {
+			//max-width: 40rem !important;
+
+			.exped-details-section-title {
+				margin-top: 3rem;
+			}
+		}
+	}
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+	#exped-details-container {
+		width: 100%;
+		// this breaks the block position that forces the
+		// sticky position of the sidebar
+		display: flex;
+		align-items: flex-start;
+		flex-direction: row;
+		padding: 0;
+		margin: 0;
+		// value found by testing
+		// max-width: 60rem;
+	}
+
+	// hide mobile-only select dropdown
+	#exped-details-select {
+		display: none !important;
+		margin: 0;
+	}
+
+	.exped-details-section {
+		padding-left: 3rem;
+
+		.container {
+			width: 100%;
+			// value found by testing
+			padding: 0;
+			margin: 0;
+			max-width: (800/16rem);
+			flex-direction: column;
+			gap: 3rem;
+		}
+	}
+
+	.exped-details-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+}
+
+/* Big Desktop - 1792px */
+@media only screen and (min-width: 112rem) {
+	#exped-details-container {
+		justify-content: center;
+
+		.exped-details-section {
+			.container {
+				width: 100%;
+				align-items: flex-start;
+				max-width: 60rem;
+			}
+		}
+	}
+}

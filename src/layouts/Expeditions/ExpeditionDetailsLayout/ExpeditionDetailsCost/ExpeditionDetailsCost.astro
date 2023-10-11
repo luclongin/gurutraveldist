@@ -1,0 +1,34 @@
+---
+import "./ExpeditionDetailsCost.less";
+import usersSVG from "../../../../assets/svg/users.svg";
+import ExpeditionDetailsInfoCard from "../../../../components/ExpeditionDetailsInfoCard/ExpeditionDetailsInfoCard.astro";
+const { frontmatter } = Astro.props;
+---
+<section class="exped-details-section" id="cost">
+	<div class="container">
+		<h2 class="exped-details-section-title">Cost</h2>
+        <ul class="price-list">
+            <li>
+                <p class="text">The price listed below is per person.</p>
+            </li>
+            {
+                Object.entries(frontmatter.priceList).map(([priceKey, priceValue]) =>
+                <li>
+                    <p class="price-list-key text">{priceKey}</p>
+                    <p class="price-list-value text" set:html={priceValue} />
+                </li>
+                )
+            }
+        </ul>
+        <p class="text">This expedition can be led by both English-speaking and Spanish-speaking guides.</p>
+        <ExpeditionDetailsInfoCard
+            iconSVG={usersSVG}
+            iconPosition="bottomStraight"
+            title="join an existing group"
+            text="A group is formed with a minimum of 2 participants to ensure the departure on your desired date.<br/>The final price will be determined based on the final group size. <br/>Please note that fixed group departures are subject to availability.<br/>Contact us for more information.<br/>"
+        />
+        <p class="text">
+            For a more personalized experience, we also provide private tour departures. These can be arranged on any date. Kindly contact us for more information.
+        </p>
+	</div>
+</section>

@@ -1,0 +1,55 @@
+.exped-details-info-card {
+	background: rgba(239, 239, 239, 0.7);
+	border-radius: (12/16rem);
+	padding: (40/16rem);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 1rem;
+	overflow: hidden;
+	position: relative;
+
+	.exped-details-info-card-title {
+		color: var(--bodyTextColor);
+		text-align: left;
+		width: 100%;
+		font-weight: 600;
+	}
+
+	.exped-details-info-card-text {
+		margin-top: 1rem;
+		line-height: 150%;
+		width: 100%;
+		color: var(--bodyTextColorLight);
+	}
+
+	img {
+		height: (210/16rem);
+		width: (210/16rem);
+	}
+
+	// icon position in card
+	.top {
+		transform: rotate(20deg);
+		position: absolute;
+		right: -5.5rem;
+		top: -4.5rem;
+		opacity: 0.2;
+	}
+
+	.bottom {
+		transform: rotate(20deg);
+		position: absolute;
+		right: -6rem;
+		bottom: -2.2rem;
+		opacity: 0.2;
+	}
+
+	.bottomStraight {
+		position: absolute;
+		right: -3rem;
+		bottom: -3.5rem;
+		opacity: 0.2;
+	}
+}

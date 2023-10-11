@@ -1,0 +1,358 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	#about-team-section {
+		background: linear-gradient(
+					to bottom right,
+					#fafafa 0%,
+					rgba(173, 234, 255, 0.91) 0%,
+					rgba(167, 233, 255, 0.9) 0%,
+					#fafafa 50%
+				)
+				bottom right / 50% 50% no-repeat,
+			linear-gradient(
+					to bottom left,
+					#fafafa 0%,
+					rgba(173, 234, 255, 0.91) 0%,
+					rgba(167, 233, 255, 0.9) 0%,
+					#fafafa 50%
+				)
+				bottom left / 50% 50% no-repeat,
+			linear-gradient(
+					to top left,
+					#fafafa 0%,
+					rgba(173, 234, 255, 0.91) 0%,
+					rgba(167, 233, 255, 0.9) 0%,
+					#fafafa 50%
+				)
+				top left / 50% 50% no-repeat,
+			linear-gradient(
+					to top right,
+					#fafafa 0%,
+					rgba(173, 234, 255, 0.91) 0%,
+					rgba(167, 233, 255, 0.9) 0%,
+					#fafafa 50%
+				)
+				top right / 50% 50%;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding: var(--sectionPadding);
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			max-width: (840/16rem);
+
+			.content {
+				min-width: fit-content;
+				text-align: center;
+				align-items: center;
+				//padding: var(--sectionPadding);
+			}
+
+			.reviews-title {
+				margin: 0;
+			}
+		}
+
+		.wrap {
+			width: 100%;
+		}
+
+		.guide-gallery {
+			display: flex;
+			flex-direction: column;
+			width: auto;
+
+			.guide-container {
+				display: flex;
+				flex-direction: column;
+				position: relative;
+
+				input {
+					display: none;
+				}
+
+				input:checked ~ .guide-collapsible {
+					display: flex;
+				}
+
+				input:checked ~ label {
+					aspect-ratio: 2 / 1;
+					transition: 0.3s;
+
+					.down-icon {
+						display: none;
+					}
+					.up-icon {
+						display: block;
+					}
+
+					.guide-img-overlay {
+						//background: none;
+						transition: 0.3s;
+					}
+
+					.guide-img,
+					.guide-img-overlay {
+						aspect-ratio: 2 / 1;
+						transition: 0.3s;
+					}
+				}
+
+				label {
+					position: relative;
+					width: 100%;
+					min-height: (200/16rem);
+					aspect-ratio: 4 / 1;
+					transition: 0.3s;
+					cursor: pointer;
+
+					&:hover {
+						.guide-img-overlay {
+							background: none;
+						}
+					}
+				}
+
+				.guide-img-overlay {
+					width: 100%;
+					aspect-ratio: 4 / 1;
+					background: rgba(0, 0, 0, 0.4);
+					z-index: 10;
+					position: relative;
+					min-height: (200/16rem);
+				}
+
+				.down-icon,
+				.up-icon {
+					position: absolute;
+					bottom: 1rem;
+					right: 1rem;
+					z-index: 2;
+				}
+
+				.up-icon {
+					transform: rotate(180deg);
+					display: none;
+				}
+
+				.guide-img {
+					width: 100%;
+					min-height: (200/16rem);
+					aspect-ratio: 4 / 1;
+
+					img {
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						top: 0;
+						left: 0;
+						object-fit: cover;
+					}
+				}
+
+				.guide-collapsible {
+					display: none;
+					transition: 0.3s;
+					background-color: inherit;
+					flex-direction: column;
+					justify-content: center;
+					align-items: flex-start;
+					padding: 2rem 1.5rem;
+					box-shadow: var(--buttonBoxShadow);//box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+					position: relative;
+					z-index: 1;
+					width: auto;
+
+					.minus-icon {
+						position: absolute;
+						background-color: var(--bodyTextColorLight);
+						height: (4/16rem);
+						aspect-ratio: 6 / 1;
+						right: 2rem;
+						top: 2rem;
+						&:hover {
+							cursor: pointer;
+						}
+					}
+
+					p {
+						z-index: 0;
+						text-align: left;
+						width: 100% !important;
+					}
+
+					.subtitle {
+						font-size: var(--subtitleFontSize);
+						letter-spacing: (3/16rem);
+						color: var(--bodyTextColorLight);
+						font-weight: 500;
+					}
+
+					.guide-collapsible-guide-name {
+						font-size: var(--bodyFontSize);
+						color: var(--bodyTextColor);
+						font-weight: 600 !important;
+						margin-bottom: 0.2rem;
+					}
+
+					.text {
+						margin-bottom: 1rem;
+					}
+
+					.guide-collapsible-fun-fact {
+						display: flex;
+						flex-direction: column;
+						gap: (8/16rem);
+						width: 100% !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+	#about-team-section {
+		.container {
+			max-width: 66.5rem !important;
+
+			.wrap {
+				width: 100%;
+			}
+
+			.guide-gallery {
+				list-style: none;
+				margin: 0 auto;
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+
+				.guide-container {
+					.down-icon {
+						display: none !important;
+					}
+
+					.up-icon {
+						display: none !important;
+					}
+
+					.guide-img,
+					label,
+					.guide-img-overlay {
+						height: 100%;
+						aspect-ratio: unset !important;
+					}
+
+					label {
+						height: 100%;
+					}
+
+					// positioning the guide collapsible based on guide position
+					&:nth-of-type(1) {
+						.guide-collapsible {
+							transform: translateX(90%);
+						}
+					}
+
+					&:nth-of-type(2) {
+						.guide-collapsible {
+							transform: translateX(80%);
+						}
+					}
+
+					&:nth-of-type(3) {
+						.guide-collapsible {
+							transform: translateX(40%);
+						}
+					}
+
+					&:nth-of-type(4) {
+						.guide-collapsible {
+							transform: translateX(-90%);
+						}
+					}
+
+					&:nth-of-type(5) {
+						.guide-collapsible {
+							transform: translateX(-96%);
+						}
+					}
+				}
+
+				input:checked ~ .guide-collapsible {
+					display: none;
+				}
+
+				input:checked ~ label {
+					transition: 0.3s;
+
+					.guide-img,
+					.guide-img-overlay {
+						transition: 0.3s;
+					}
+				}
+
+				.guide-container {
+					float: left;
+					width: 20%;
+					height: 600px;
+					//opacity: 0.6;
+					transition: all 0.5s ease-out;
+
+					&:hover {
+						cursor: none;
+						opacity: 1;
+					}
+
+					.guide-collapsible {
+						position: absolute;
+						transition: all 0.5s ease-out;
+						padding: 2rem !important;
+						bottom: 2rem;
+						min-width: (280/16rem);
+						background: rgba(250, 250, 250, 1);
+						box-shadow: var(--buttonBoxShadow);//box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+						backdrop-filter: blur(21px);
+						z-index: 11;
+
+						p,
+						.guide-collapsible-fun-fact {
+							width: calc(100%) !important;
+						}
+
+						.guide-collapsible-fun-fact p {
+							width: 100% !important;
+							margin: 0 !important;
+						}
+					}
+					// ON CLICK AND OPEN
+
+					&:hover,
+					&:first-child ~ li:last-child {
+						width: 60%;
+						opacity: 1;
+						transition: all 0.5s ease-in-out;
+
+						.guide-collapsible {
+							display: flex;
+						}
+
+						.guide-img-overlay {
+							display: none;
+						}
+					}
+
+					&:hover ~ li:last-child {
+						width: 12%;
+						opacity: 0.6;
+						background: rgba(0, 0, 0, 0.4);
+					}
+				}
+			}
+		}
+	}
+}

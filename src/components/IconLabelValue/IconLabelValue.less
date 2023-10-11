@@ -1,0 +1,48 @@
+.icon-and-label-and-value {
+	display: flex;
+	//	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+
+	img {
+		opacity: 0.6;
+		filter: invert(65%) sepia(77%) saturate(18%) hue-rotate(93deg)
+			brightness(93%) contrast(50%);
+	}
+
+	.text-content {
+		display: flex;
+		flex-direction: column;
+		gap: (8/16rem);
+	}
+}
+
+.icon-label-value-column {
+	flex-direction: column !important;
+	align-items: flex-start !important;
+	justify-content: flex-start !important;
+	margin: 0 !important;
+
+	img {
+		width: 60px;
+		height: 60px;
+	}
+
+	.text-content {
+		width: 100%;
+
+		.subtitle {
+			letter-spacing: (4/16rem);
+			font-weight: 500;
+			font-size: 14px;
+		}
+
+		.bold {
+			font-weight: 600;
+			letter-spacing: (4/16rem);
+			text-transform: uppercase;
+			font-size: 14px;
+		}
+	}
+}

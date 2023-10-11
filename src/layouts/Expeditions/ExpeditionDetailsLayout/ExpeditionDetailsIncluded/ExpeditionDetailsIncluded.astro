@@ -1,0 +1,49 @@
+---
+import checkmarkImg from "../../../../assets/svg/checkmark.svg";
+import xMarkImg from "../../../../assets/svg/x.svg";
+import IconAndLabel from "../../../../components/IconAndLabel/IconAndLabel.astro";
+import "./ExpeditionDetailsIncluded.less";
+const {frontmatter} = Astro.props;
+---
+<section class="exped-details-section" id="included">
+	<div class="container">
+        <h2 class="exped-details-section-title">What's included</h2>
+        <div class="exped-details-included-line">
+            <p class="subtitle">Pick-up</p>
+            <p class="text">{frontmatter.pickup}</p>
+        </div>
+        <div class="exped-details-included-line">
+            <p class="subtitle">Drop-off</p>
+            <p class="text">{frontmatter.dropoff}</p>
+        </div>
+        <div class="exped-details-included-line included-list-container">
+            <p class="subtitle">Included</p>
+            <ul class="exped-details-included-list">
+                {
+                    frontmatter.includedList.map(
+                        item => <IconAndLabel 
+                                    value={item} 
+                                    imgSrc={checkmarkImg}
+                                />
+                    )
+                }
+            </ul>
+            
+        </div>
+        <div class="exped-details-included-line included-list-container">
+            <p class="subtitle">Not Included</p>
+            <ul class="exped-details-included-list">
+                {
+                    frontmatter.notIncludedList.map(
+                        item => <IconAndLabel 
+                                    value={item} 
+                                    imgSrc={xMarkImg}
+                                />
+                    )
+                }
+            </ul>
+            
+        </div>
+
+	</div>
+</section>

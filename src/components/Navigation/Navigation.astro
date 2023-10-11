@@ -1,0 +1,112 @@
+---
+import "./Navigation.less";
+import { Image } from "astro:assets";
+import Logo from "../../assets/images/gurutravel_logo.png";
+import SpanishFlag from "../../assets/svg/icons8-españa-48.png";
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+<!-- ============================================ -->
+<!--         Navigation Code Stitch               -->
+<!-- ============================================ -->
+<header id="header">
+	<div class="container navigation">
+		<!-- Navigation Logo -->
+		<a href="/" class="nav-logo" aria-label="back to homepage">
+			<img
+				src={Logo.src}
+				alt="logo"
+				width="210"
+				height="29"
+				aria-hidden="true"
+				decoding="async"
+			/>
+		</a>
+		<!-- Navigation List -->
+		<nav class="nav" role="navigation">
+			<!-- Mobile Language Button -->
+			<a
+				class="nav-language-mobile"
+				aria-label="Cambiar a Español"
+			>
+				<Image
+					class="nav-language-flag"
+					src={SpanishFlag}
+					alt="Cambiar a Español"
+				/>
+				Español
+			</a>
+			<!-- Mobile Nav Toggle -->
+			<button class="cs-toggle" aria-label="mobile menu toggle">
+				<div class="cs-box" aria-hidden="true">
+					<span class="cs-line cs-line1" aria-hidden="true"></span>
+					<span class="cs-line cs-line2" aria-hidden="true"></span>
+					<span class="cs-line cs-line3" aria-hidden="true"></span>
+				</div>
+			</button>
+			<!-- 
+				We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list
+				gets too long from too many dropdowns being opened and needs to have an overflow 
+				scroll. This wrapper acts as the background so it can go the full height of the 
+				screen and not cut off any overflowing nav items while the cs-ul stops short of 
+				the bottom of the screen, which keeps all nav items in view no matter how mnay 
+				there are.
+			-->
+		  
+			<div class="nav-ul-wrapper">
+				<ul id="nav-ul-expanded" class="nav-ul" aria-expanded="false">
+					<li class="nav-li">
+						<!-- if currentPath is truthy, nav-li-link-selected will be added -->
+						<a
+							id="nav-home-link"
+							href="/"
+							class:list={["nav-li-link", {"nav-li-link-selected": currentPath===""}]}
+						>
+							Home
+						</a>
+					</li>
+					<li class="nav-li nav-padded-li">
+						<a 
+							id="nav-team-link" 
+							href="/about" 
+							class:list={["nav-li-link", {"nav-li-link-selected": currentPath.includes("about")}]}
+						>Team</a>
+					</li>
+					<li class="nav-li nav-padded-li">
+						<a
+							id="nav-expeditions-link"
+							href="/expeditions"
+							class:list={["nav-li-link", {"nav-li-link-selected": currentPath.includes("expeditions")}]}
+							>Expeditions</a
+						>
+					</li>
+					<li class="nav-li">
+						<a 
+							id="nav-gallery-link" 
+							href="/gallery" 							
+							class:list={["nav-li-link", {"nav-li-link-selected": currentPath.includes("gallery")}]}
+							>Gallery</a
+						>
+					</li>
+					<li class="nav-li hide-mobile">
+						<a id="nav-language-link" href="/" class="nav-li-link">
+							<Image
+								class="nav-language-flag"
+								src={SpanishFlag}
+								alt="Cambiar a Español"
+							/>
+						</a>
+					</li>
+					<li class="nav-li extra-enquire-link">
+						<a id="nav-gallery-link" href="/about/#enquire" class="nav-li-link"
+							>Enquire Now ></a
+						>
+					</li>
+				</ul>
+			</div>
+			<a href="/about/#enquire" class="solid-btn nav-btn">Enquire</a>
+		</nav>
+	</div>
+</header>
+<script src="./Navigation.js"></script>

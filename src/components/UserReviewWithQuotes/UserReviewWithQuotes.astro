@@ -1,0 +1,27 @@
+---
+import UserReviewInfo from '../UserReviewInfo/UserReviewInfo.astro';
+import './UserReviewWithQuotes.less';
+import { Image } from "astro:assets";
+import leftQuote from "../../assets/images/left-quote.png";
+import rightQuote from "../../assets/images/right-quote.png";
+const {clientName, clientDate, clientExpedition, reviewText} = Astro.props;
+---
+<!-- UserInfo component with 2 quotes left and right for Homepage Review Container -->
+<div class="review-quote">
+    <Image
+        class="review-left-quote"
+        src={leftQuote}
+        alt="Left Quote"
+    />
+    <div class="review-content">
+        <p class="review-quote-text text">
+            {reviewText}
+        </p>
+        <UserReviewInfo clientName={clientName} clientExpedition={clientExpedition} clientDate={clientDate} />
+    </div>
+    <Image
+        class="review-right-quote"
+        src={rightQuote}
+        alt="Right Quote"
+    />
+</div>

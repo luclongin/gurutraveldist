@@ -1,0 +1,106 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #reviews-section {
+        padding: var(--sectionPadding);
+        display: flex;
+        flex-direction: column;
+
+        .container {
+            flex-direction: column;
+        }
+
+        .content {
+            min-width: fit-content;
+            text-align: center;
+            align-items: center;
+        }
+
+        .reviews-title {
+            margin: 0;
+        }
+
+        .reviews-images-container {
+            max-width: (542/16rem);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: clamp(.5rem, 2vw, 1.25rem);
+            width: 100%;
+
+        }
+
+        .reviews-img {
+            width: 31%;
+            min-height: clamp((80/16rem), 25vw, (168/16rem));
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: (12/16rem);
+            }
+
+        }
+
+    }
+}
+
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #reviews-section {
+        .container {
+            max-width: (1064/16rem);
+        }
+
+        .reviews-images-container {
+            max-width: (1064/16rem);
+            //max-width: (840/16rem);
+            width: 100%;
+            /* prevents flexbox from squishing it */
+            flex: none;
+        }
+
+        .reviews-img {
+            width: 23%;
+            aspect-ratio: initial;
+
+
+            &:nth-of-type(1) {
+                width: 27%;
+            }
+
+            &:nth-of-type(2) {
+                width: 20%;
+            }
+
+            &:nth-of-type(3) {
+                width: 27%;
+            }
+
+            &:nth-of-type(4) {
+                width: 19%;
+            }
+
+            &:nth-of-type(5) {
+                width: 20%;
+            }
+
+            &:nth-of-type(6) {
+                width: 27%;
+            }
+
+            &:nth-of-type(7) {
+                width: 19%;
+            }
+
+            &:nth-of-type(8) {
+                width: 27%;
+            }
+        }
+    }
+}

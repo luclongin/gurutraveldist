@@ -1,0 +1,36 @@
+/* Mobile - 0 */
+@media only screen and (min-width: 0rem) {
+	.see-all-btn {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: (8/16rem);
+		color: var(--bodyTextColorLight);
+		cursor: pointer !important;
+		z-index: 1;
+		position: relative;
+		font-weight: 500;
+		text-decoration: none;
+		margin: 0 auto;
+		margin: 3rem 0;
+		width: 100%;
+
+		&:hover {
+			color: var(--primary);
+			font-weight: 700;
+
+			.bold-plus-icon {
+				display: block;
+			}
+
+			.default-plus-icon {
+				display: none;
+			}
+		}
+
+		.bold-plus-icon {
+			display: none;
+		}
+	}
+}

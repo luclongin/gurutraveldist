@@ -1,0 +1,46 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    .quote-user-profile {
+        display: flex;
+        flex-direction: row;
+        gap: clamp((8/16rem), 3vw, (16/16rem));
+        margin-bottom: clamp(2rem, 5vw, 3.5rem);
+
+        .review-user-profile-img {
+            width: clamp(5rem, 5vw, 8rem);
+            aspect-ratio: 1 / 1;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .quote-user-profile-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: (2/16rem);
+            color: var(--bodyTextColorLight);
+
+            .quote-user-profile-name {
+                font-size: var(--bodyFontSize);
+                font-weight: 600;
+            }
+
+            .quote-user-profile-activity {
+                font-size: calc(var(--bodyFontSize)*0.7);
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: (2/16rem);
+            }
+
+            .quote-user-profile-date {
+                font-size: calc(var(--bodyFontSize)*0.7);
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: (2/16rem);
+
+            }
+        }
+
+
+    }
+}

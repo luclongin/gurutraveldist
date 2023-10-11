@@ -1,1 +1,0 @@
-import{j as r}from"./jsx-runtime.51014c9d.js";import"./huayhuash-circuit.e68c6c09.4ed993c7.js";import"./index.6460afdd.js";const a=t=>r.jsx("div",{className:"gallery-container"});export{a as default};

@@ -1,0 +1,83 @@
+.cs-toggle {
+	/* 44px - 48px */
+	width: fit-content;
+	//height: clamp(2.75rem, 6vw, 3rem);
+	margin: 0;
+	border-radius: (4/16rem);
+	border: none;
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	align-items: center;
+	//padding: 0.5rem;
+
+	span {
+		font-size: var(--bodyFontSize);
+		color: var(--bodyTextColorLight);
+	}
+}
+
+.cs-active {
+	.cs-line1 {
+		top: 50%;
+		transform: translate(-50%, -50%) rotate(225deg);
+	}
+
+	.cs-line2 {
+		top: 50%;
+		transform-origin: center;
+		transform: translate(-50%, -50%) translateY(0) rotate(-225deg);
+	}
+
+	.cs-line3 {
+		bottom: 100%;
+		opacity: 0;
+	}
+}
+
+.cs-box {
+	/* 24px - 28px */
+	width: clamp(1.5rem, 2vw, 1.75rem);
+	/* 14px - 16px */
+	height: clamp(0.875rem, 1.5vw, 1rem);
+	position: relative;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.cs-line {
+	width: 100%;
+	height: 2px;
+	border-radius: 2px;
+	background-color: var(--bodyTextColorLight);
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.cs-line1 {
+	top: 0;
+	transform-origin: center;
+	transition: transform 0.5s, top 0.3s, left 0.3s;
+	animation-duration: 0.7s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	animation-direction: normal;
+}
+
+.cs-line2 {
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	transition: top 0.3s, left 0.3s, transform 0.5s;
+	animation-duration: 0.7s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	animation-direction: normal;
+}
+
+.cs-line3 {
+	bottom: 0;
+	transition: bottom 0.3s, opacity 0.3s;
+}

@@ -1,0 +1,36 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #exped-section {
+        padding: var(--sectionPadding);
+        display: flex;
+        flex-direction: column;
+
+        .container {
+            flex-direction: column;
+        }
+
+        .content {
+            min-width: fit-content;
+            text-align: center;
+            align-items: center;
+
+            .exped-title {
+                margin-bottom: (8/16rem);
+            }
+        }
+
+        .exped-section-btn {
+            margin-top: (20/16rem);
+        }
+    }
+}
+
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #exped-section {
+        .container {
+            max-width: 66.5rem;
+        }
+    }
+}

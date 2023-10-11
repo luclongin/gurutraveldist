@@ -1,0 +1,16 @@
+---
+import "./WhatsappButton.less";
+import whatsappImg from '../../assets/svg/whatsapp.png';
+import { Image } from "astro:assets";
+
+---
+
+<a href="/" class="solid-btn whatsapp-btn">
+    <Image 
+        src={whatsappImg}
+        alt="Whatsapp Icon"
+        height="24"
+        width="24"
+    />
+    Chat on Whatsapp
+</a>

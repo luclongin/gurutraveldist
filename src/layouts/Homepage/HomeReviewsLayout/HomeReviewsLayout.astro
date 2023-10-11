@@ -1,0 +1,169 @@
+---
+import './HomeReviewsLayout.less';
+import Img1 from "../../../assets/images/hero/austin-ban-juHayWuaaoQ-unsplash.webp";
+import Img1Mobile from "../../../assets/images/hero/austin-ban-juHayWuaaoQ-unsplash-m.webp";
+import Img2 from "../../../assets/images/hero/tiago-rosado-cMG5qjpnsyg-unsplash.webp";
+import Img2Mobile from "../../../assets/images/hero/tiago-rosado-cMG5qjpnsyg-unsplash-m.webp";
+import Img3 from "../../../assets/images/what-we-offer.jpg";
+
+
+import HomeCarousel from '../../../components/HomeCarousel/HomeCarousel.astro';
+---
+<!-- ============================================ -->
+<!--           Homepage - Reviews Section         -->
+<!-- ============================================ -->
+<section id="reviews-section">
+	<div class="container">
+		<div class="content">
+			<span class="topper">Reviews</span>
+			<h2 class="section-title title reviews-title">
+				Success measured in smiles
+			</h2>
+		</div>
+        <div class="reviews-images-container">
+			<picture class="reviews-img">
+				<source
+					media="(max-width: 480px)"
+					srcset={Img1Mobile.src}
+				/>
+				<source
+					media="(min-width: 480px)"
+					srcset={Img1.src}
+				/>
+				<img
+					loading="lazy"
+					decoding="async"
+					src={Img1.src}
+					alt="people outside"
+					width="254"
+					height="262"
+				/>
+			</picture>
+			<picture class="reviews-img">
+				<source
+					media="(max-width: 480px)"
+					srcset={Img2Mobile.src}
+				/>
+				<source
+					media="(min-width: 480px)"
+					srcset={Img2.src}
+				/>
+				<img
+					loading="lazy"
+					decoding="async"
+					src={Img2.src}
+					alt="people outside"
+					width="254"
+					height="262"
+				/>
+			</picture>
+			<picture class="reviews-img">
+				<source
+					media="(max-width: 480px)"
+					srcset={Img3.src}
+				/>
+				<source
+					media="(min-width: 480px)"
+					srcset={Img3.src}
+				/>
+				<img
+					loading="lazy"
+					decoding="async"
+					src={Img3.src}
+					alt="person gardening"
+					width="254"
+					height="262"
+				/>
+			</picture>
+			<picture class="reviews-img">
+				<source
+					media="(max-width: 480px)"
+					srcset={Img3.src}
+				/>
+				<source
+					media="(min-width: 480px)"
+					srcset={Img3.src}
+				/>
+				<img
+					loading="lazy"
+					decoding="async"
+					src={Img3.src}
+					alt="urban environment in green"
+					width="254"
+					height="262"
+				/>
+			</picture><picture class="reviews-img">
+				<source
+					media="(max-width: 480px)"
+					srcset={Img2Mobile.src}
+				/>
+				<source
+					media="(min-width: 480px)"
+					srcset={Img2.src}
+				/>
+				<img
+					loading="lazy"
+					decoding="async"
+					src={Img2.src}
+					alt="urban environment in green"
+					width="254"
+					height="262"
+				/>
+			</picture><picture class="reviews-img">
+				<source
+					media="(max-width: 480px)"
+					srcset={Img1.src}
+				/>
+				<source
+					media="(min-width: 480px)"
+					srcset={Img1.src}
+				/>
+				<img
+					loading="lazy"
+					decoding="async"
+					src={Img1.src}
+					alt="urban environment in green"
+					width="254"
+					height="262"
+				/>
+			</picture>
+            <picture class="reviews-img display-tablet">
+				<source
+					media="(max-width: 480px)"
+					srcset={Img1.src}
+				/>
+				<source
+					media="(min-width: 480px)"
+					srcset={Img1.src}
+				/>
+				<img
+					loading="lazy"
+					decoding="async"
+					src={Img1.src}
+					alt="people outside"
+					width="254"
+					height="262"
+				/>
+			</picture>
+			<picture class="reviews-img display-tablet">
+				<source
+					media="(max-width: 480px)"
+					srcset={Img2Mobile.src}
+				/>
+				<source
+					media="(min-width: 480px)"
+					srcset={Img2.src}
+				/>
+				<img
+					loading="lazy"
+					decoding="async"
+					src={Img2.src}
+					alt="people outside"
+					width="254"
+					height="262"
+				/>
+			</picture>
+		</div>
+		<HomeCarousel />
+	</div>
+</section>

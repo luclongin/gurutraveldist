@@ -1,0 +1,32 @@
+---
+import "./UserReviewInfo.less";
+import { Image } from "astro:assets";
+import jakeImg from '../../assets/images/alexander-hipp-iEEBWgY_6lA-unsplash.jpg';
+import stephanieImg from '../../assets/images/stephanie-liverani-Zz5LQe-VSMY-unsplash.jpg';
+import juanImg from '../../assets/images/jurica-koletic-7YVZYZeITc8-unsplash.jpg';
+
+const {clientName, clientExpedition, clientDate} = Astro.props;
+---
+<!-- Basic user image in a circle with client name, activity with tour (e.g. Huayhuash Trek) and date of activity (e.g. May 2023) -->
+<div class="quote-user-profile">
+    { clientName == "Stephanie Liveranie" && <Image
+        class="review-user-profile-img"
+        src={stephanieImg}
+        alt="User Image"
+    />}
+    { clientName == "Jake Shelton" && <Image
+    class="review-user-profile-img"
+    src={jakeImg}
+    alt="User Image"
+/>}
+    { clientName == "Juan Huaman" && <Image
+    class="review-user-profile-img"
+    src={juanImg}
+    alt="User Image"
+/>}
+    <div class="quote-user-profile-content">
+        <p class="quote-user-profile-name">{clientName}</p>
+        <p class="quote-user-profile-activity">{clientExpedition}</p>
+        <p class="quote-user-profile-date">{clientDate}</p>
+    </div>
+</div>

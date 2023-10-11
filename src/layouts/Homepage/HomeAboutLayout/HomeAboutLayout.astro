@@ -1,0 +1,115 @@
+---
+import "./HomeAboutLayout.less";
+import Image1 from '../../../assets/images/homepage/federico-scarionati-kGo-lrppUpU-unsplash.jpg';
+import Image2 from "../../../assets/images/homepage/maxime-gilbert-LxwlUczYduM-unsplash.jpg";
+import Image3 from "../../../assets/images/homepage/alexander-schimmeck-MraFXV3v7Ts-unsplash.jpg";
+import Image4 from "../../../assets/images/homepage/dino-reichmuth-5Rhl-kSRydQ-unsplash.jpg";
+---
+<!-- ============================================ -->
+<!--             Homepage - About Section         -->
+<!-- ============================================ -->
+<section id="about-section">
+	<div class="container">
+		<!-- Left section -->
+		<div class="about-images-container">
+			<picture class="about-img">
+				<source
+					media="(max-width: 480px)"
+					srcset={Image1.src}
+				/>
+				<source
+					media="(min-width: 480px)"
+					srcset={Image1.src}
+				/>
+				<img
+					loading="lazy"
+					decoding="async"
+					src={Image1.src}
+					alt="people outside"
+					width="254"
+					height="262"
+				/>
+			</picture>
+			<picture class="about-img">
+				<source
+					media="(max-width: 480px)"
+					srcset={Image2.src}
+				/>
+				<source
+					media="(min-width: 480px)"
+					srcset={Image2.src}
+				/>
+				<img
+					loading="lazy"
+					decoding="async"
+					srcset={Image2.src}
+					alt="people outside"
+					width="254"
+					height="262"
+				/>
+			</picture>
+			<picture class="about-img">
+				<source
+					media="(max-width: 480px)"
+					srcset={Image3.src}
+				/>
+				<source
+					media="(min-width: 480px)"
+					srcset={Image3.src}
+				/>
+				<img
+					loading="lazy"
+					decoding="async"
+					src={Image3.src}
+					alt="person gardening"
+					width="254"
+					height="262"
+				/>
+			</picture>
+			<picture class="about-img">
+				<source
+					media="(max-width: 480px)"
+					srcset={Image4.src}
+				/>
+				<source
+					media="(min-width: 480px)"
+					srcset={Image4.src}
+				/>
+				<img
+					loading="lazy"
+					decoding="async"
+					src={Image4.src}
+					alt="urban environment in green"
+					width="254"
+					height="262"
+				/>
+			</picture>
+		</div>
+		<!-- Right Section -->
+		<div class="content">
+			<span class="topper">Who we are</span>
+			<h2 class="section-title title">From Dreams To Summits</h2>
+			<p class="section-text text">
+				Embark on Andean adventures with Guru Travel. 5 years of
+				experience, 3000+ satisfied clients. Expert guides ensure safe
+				peak conquests, crafting unforgettable memories in Huaraz,
+				Per&uacute;.<br />Your journey starts now.
+			</p>
+            <div class="stats-container">  
+                <div class="stat-group stat-2">
+                    <p class="stat-bold">5</p>
+                    <p class="stat-description">world-class mountain guides</p>
+                </div>
+                <div class="stat-group stat-3">
+                    <p class="stat-bold">130</p>
+                    <p class="stat-description">years of combined experience</p>
+                </div>
+				<div class="stat-group stat-1">
+                    <p class="stat-bold">3000</p>
+                    <p class="stat-description">happy climbers</p>
+                </div>
+            </div>
+            <a href="/about" class="solid-btn about-section-btn">Learn More</a>
+		</div>
+	</div>
+</section>

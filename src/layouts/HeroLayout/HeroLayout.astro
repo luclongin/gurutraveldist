@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+const { heroTitle1, heroTitle2, heroImg, heroImgMobile } = Astro.props;
+import caretDown from "../../assets/svg/icons8-flecha-ampliar-64.png";
+import './HeroLayout.less';
+---
+<!-- ============================================ -->
+<!--                 Hero Section                 -->
+<!-- ============================================ -->
+<section id="hero-section">
+	<div class="container">
+		<picture class="hero-container-img">
+			<source media="(max-width: 900px)" srcset={heroImgMobile.src}>
+			<source media="(min-width: 901px)" srcset={heroImg}>
+			<img aria-hidden="true" loading="lazy" decoding="async" src={heroImg.src} alt="kitchen cabinets" width="1920" height="1280">
+		</picture>
+		<div class="hero-gradient"></div>
+		<h1 class="hero-title">{heroTitle1}<br />{heroTitle2}</h1>
+		<Image
+			class="hero-container-caret-down"
+			src={caretDown}
+			alt="Scroll down to see more"
+		/>
+	</div>
+</section>
+

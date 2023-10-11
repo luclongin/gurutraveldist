@@ -1,0 +1,37 @@
+---
+const {textTitle, imgTitle} = Astro.props;
+import './TextWithDisappearingImg.less';
+import whoWeAreImg from "../../assets/images/who-we-are.jpg";
+import whoWeAreImgMobile from "../../assets/images/who-we-are-m.jpg";
+import whatWeOffer from "../../assets/images/what-we-offer.jpg";
+import whatWeOfferMobile from "../../assets/images/what-we-offer-m.jpg";
+
+const imgDict = {
+	"who-we-are": {default: whoWeAreImg, mobile: whoWeAreImgMobile},
+	"what-we-offer": {default: whatWeOffer, mobile: whatWeOfferMobile}
+};
+
+---
+<div class="text-with-disappearing-img">
+    <div class="content">
+        <h2 class="title">{textTitle}</h2>
+        <slot></slot>
+    </div>
+    <div class="image-container">
+        <div class="white-img-overlay"></div>
+        <div class="white-img-overlay2"></div>
+
+        <picture class=`disappearing-img`>
+			<source media="(max-width: 900px)" srcset={imgDict[imgTitle].mobile.src}>
+			<source media="(min-width: 901px)" srcset={imgDict[imgTitle].default.src}>
+            <img
+                loading="lazy"
+                decoding="async"
+                srcset={imgDict[imgTitle].default.src}
+                alt="people outside"
+                width="254"
+                height="262"
+            />
+        </picture>
+    </div>
+</div>

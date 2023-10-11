@@ -1,0 +1,59 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	#overview {
+		// Padding for scrolling
+    	// to not hide the title
+		scroll-margin-top: var(--scrollMarginTop);
+		scroll-snap-margin-top: var(--scrollMarginTop); /* iOS 11 and older */
+	
+		.container {
+			.exped-details-overview-content {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: flex-start;
+				gap: 2rem;
+				width: 100%;
+
+				.icon-label-value-column {
+					width: (144/16rem);
+					padding: 1rem 0;
+
+					p.bold {
+						font-size: 14px; //var(--subtitleFontSize);
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Tablet - 736px */
+@media only screen and (min-width: 46rem) {
+	#overview {
+		.container {
+			.exped-details-overview-content {
+				justify-content: flex-start;
+
+				.icon-label-value-column {
+					width: calc(33% - 2rem);
+					p.bold {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+	#overview {
+		.container {
+			.exped-details-overview-content {
+				gap: 2rem;
+				max-width: 60rem;
+			}
+		}
+	}
+}

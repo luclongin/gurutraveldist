@@ -1,0 +1,56 @@
+---
+import "./ExpeditionCard.less";
+import { Image } from "astro:assets";
+import triangle from "../../assets/svg/triangle.svg";
+import clock from "../../assets/svg/clock.svg";
+import ExpeditionDifficultyBars from "../ExpeditionDifficultyBars/ExpeditionDifficultyBars.astro";
+const {id, type, name, url, difficulty, altitude, duration, description, mobileImg, defaultImg, hidden} = Astro.props;
+---
+<!-- previously `expeditions/${url}` but turns out it gives us: 
+expeditions/expeditions//URL-->
+<a href={`${url}`} class=`expedition-card ${hidden ? "hidden" : ""}`>
+    <div class="expedition-img-container">
+        <div class="expedition-card-hover">
+            <p class="card-hover-text">See More</p>
+        </div>
+        <div class="expedition-img-overlay"></div>
+        <picture class="expedition-card-img">
+            <source
+                media="(max-width: 480px)"
+                srcset={mobileImg}
+            />
+            <source
+                media="(min-width: 480px)"
+                srcset={defaultImg}
+            />
+            <img
+                loading="lazy"
+                decoding="async"
+                src={defaultImg}
+                alt="person gardening"
+                width="400"
+                height="200"
+            />
+        </picture>
+        <div class="expedition-img-container-content">
+            <p class="subtitle expedition-name">{name}</p>
+            <div class="difficulty-container">
+                <ExpeditionDifficultyBars difficulty={difficulty} />
+                <p class="subtitle expedition-difficulty-text">{difficulty}</p>
+            </div>
+        </div>
+    </div>
+    <div class="expedition-content">
+        <div class="expedition-content-stats">
+            <div class="expedition-altitude">
+                <Image src={triangle} alt="Altitude Icon" height="16" width="16" />
+                <p class="expedition-altitude-text">{altitude}</p>
+            </div>
+            <div class="expedition-duration">
+                <Image src={clock} alt="Clock Icon" height="16" width="16" />
+                <p class="expedition-duration-text">{duration}</p>
+            </div>
+        </div>
+        <p class="expedition-description-text">{description}</p>
+    </div>
+</a>

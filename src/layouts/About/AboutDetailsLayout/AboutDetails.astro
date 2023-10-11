@@ -1,0 +1,30 @@
+---
+import "./AboutDetails.less";
+import TextDisappearingText from "../../../components/TextDisappearingText/TextDisappearingText.astro";
+import whoWeAreImg from "../../../assets/images/who-we-are.jpg";
+import whoWeAreImgMobile from "../../../assets/images/who-we-are-m.jpg";
+---
+<section id="about-details-section">
+    <div class="container">
+        <TextDisappearingText topTextTitle="Who We Are" bottomTextTitle="What We Offer" imgSrc={whoWeAreImg.src} imgSrcMobile={whoWeAreImgMobile.src}>
+            <div slot="topText">
+                <p class="text">
+                    Our extraordinary journey started right here amidst the towering Andean peaks, where a tight-knit group of friends, all hailing from these very mountains, harbored a shared aspiration. 
+                </p>    
+                <p class="text">
+                    Living in the midst of breathtaking beauty, yet grappling with the challenges of poverty, we united with a common purpose. Fueled by a desire to uplift our families and provide for their well-being, we conceived Guru Travel in 2018.
+                </p>
+            </div>
+            <div slot="bottomText">
+                <p class="text">
+                    When you choose Guru Travel, you're not just booking a mountaineering tour. 
+                    You're embarking on a journey of a lifetime with a team that is passionate about sharing the beauty and challenge of the Peruvian Andes. 
+                </p>    
+                <p class="text">
+                    We are dedicated to providing safe, thrilling, and culturally immersive experiences that leave you with a profound connection to the mountains and the people who call them home.
+                    Living in the midst of breathtaking beauty, yet grappling with the challenges of poverty, we united with a common purpose. Fueled by a desire to uplift our families and provide for their well-being, we conceived Guru Travel in 2018.
+                </p>
+            </div>
+        </TextDisappearingText>
+    </div>
+</section>

@@ -1,0 +1,464 @@
+/*-- -------------------------- -->
+<---     Mobile Navigation      -->
+<--- -------------------------- -*/
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Mobile - 1023px */
+@media only screen and (max-width: 55rem) {
+	body {
+		&.cs-open {
+			overflow: hidden;
+		}
+	}
+
+	#header {
+		width: 100%;
+		border: none;
+		/* prevents padding from affecting height and width */
+		box-sizing: border-box;
+		background-color: var(--navBackground);
+		color: var(--primaryLight);
+		position: fixed;
+		top: 0;
+		z-index: 1000;
+		margin: 0;
+		padding: var(--navPadding);
+
+		&.cs-active {
+			&:before {
+				width: 100%;
+				opacity: 1;
+			}
+
+			.nav-ul-wrapper {
+				opacity: 1;
+				transform: scaleX(1);
+				transition-delay: 0.2s;
+			}
+
+			.nav-li {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+
+		.nav {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+
+		.container {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			align-items: center;
+			padding: 1.5rem 0;
+			max-width: 66.5rem;
+		}
+
+		.nav-language-mobile {
+			//width: clamp(2.75rem, 6vw, 3rem);
+			height: clamp(2.75rem, 6vw, 3rem);
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			padding: 0 1rem;
+			font-size: clamp(0.8rem, 2vw, 0.9rem);
+			font-weight: 500;
+
+			img {
+				margin-right: (4/16rem);
+			}
+		}
+
+		.nav-logo {
+			width: 40%;
+			max-width: (146/16rem);
+			height: 100%;
+			margin: 0 auto 0 0;
+			padding: 0;
+			/* prevents padding from affecting height and width */
+			box-sizing: border-box;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 10;
+
+			img {
+				width: 100%;
+				height: 100%;
+				/* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
+				object-fit: contain;
+				/* places the image to the left edge of the parent */
+				object-position: left;
+				filter: invert(95%) sepia(16%) saturate(58%) hue-rotate(126deg)
+					brightness(98%) contrast(98%);
+			}
+		}
+
+		.cs-toggle {
+			/* 44px - 48px */
+			width: clamp(2.75rem, 6vw, 3rem);
+			height: clamp(2.75rem, 6vw, 3rem);
+			margin: 0 0 0 auto;
+			border-radius: (4/16rem);
+			background-color: transparent;
+			border: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 10000;
+		}
+
+		.cs-active {
+			.cs-line1 {
+				top: 50%;
+				transform: translate(-50%, -50%) rotate(225deg);
+			}
+
+			.cs-line2 {
+				top: 50%;
+				transform-origin: center;
+				transform: translate(-50%, -50%) translateY(0) rotate(-225deg);
+			}
+
+			.cs-line3 {
+				bottom: 100%;
+				opacity: 0;
+			}
+		}
+
+		.cs-box {
+			/* 24px - 28px */
+			width: clamp(1.5rem, 2vw, 1.75rem);
+			/* 14px - 16px */
+			height: clamp(0.875rem, 1.5vw, 1rem);
+			position: relative;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		.cs-line {
+			width: 100%;
+			height: 2px;
+			border-radius: 2px;
+			background-color: var(--primaryLight);
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.cs-line1 {
+			top: 0;
+			transform-origin: center;
+			transition: transform 0.5s, top 0.3s, left 0.3s;
+			animation-duration: 0.7s;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+			animation-direction: normal;
+		}
+
+		.cs-line2 {
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			transition: top 0.3s, left 0.3s, transform 0.5s;
+			animation-duration: 0.7s;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+			animation-direction: normal;
+		}
+
+		.cs-line3 {
+			bottom: 0;
+			transition: bottom 0.3s, opacity 0.3s;
+		}
+
+		.nav-ul-wrapper {
+			height: auto;
+			width: 100vw;
+			opacity: 0;
+			background-color: var(--navBackground);
+			overflow-y: auto;
+			overflow-x: hidden;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			z-index: 0;
+			transform: scaleY(0);
+			transform-origin: top;
+			transition: transform 0.4s, opacity 0.3s;
+		}
+
+		.nav-ul {
+			margin: 0;
+			/* 28px - 40px */
+			padding: var(--navPadding);
+			padding-top: (16/16rem);
+			padding-bottom: (40/16rem);
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			gap: (32/16rem);
+		}
+
+		.nav-li {
+			text-align: left;
+			list-style: none;
+			width: 100%;
+
+			margin-right: 0;
+			/* transition from these values */
+			transform: translateX(-40/16rem);
+			opacity: 0;
+			transition: transform 0.6s, opacity 0.9s;
+
+			&:nth-of-type(1) {
+				transition-delay: 0.05s;
+			}
+
+			&:nth-of-type(2) {
+				transition-delay: 0.1s;
+			}
+
+			&:nth-of-type(3) {
+				transition-delay: 0.15s;
+			}
+
+			&:nth-of-type(4) {
+				transition-delay: 0.2s;
+			}
+
+			&:nth-of-type(5) {
+				transition-delay: 0.25s;
+			}
+
+			&:nth-of-type(6) {
+				transition-delay: 0.3s;
+			}
+
+			&:nth-of-type(7) {
+				transition-delay: 0.35s;
+			}
+
+			&:nth-of-type(8) {
+				transition-delay: 0.4s;
+			}
+
+			&:nth-of-type(9) {
+				transition-delay: 0.45s;
+			}
+		}
+
+		.nav-li-link {
+			font-size: 1rem;
+			font-weight: 400;
+			color: var(--primaryLight);
+			text-decoration: none;
+			text-transform: uppercase;
+			letter-spacing: (1/16rem);
+
+			&:before {
+				/* active state underline */
+				content: "";
+				width: 100%;
+				height: 3px;
+				background: var(--primary);
+				opacity: 1;
+				position: absolute;
+				display: none;
+				bottom: (-4/16rem);
+				left: 0;
+			}
+
+			&.cs-active {
+				&:before {
+					display: block;
+				}
+			}
+
+			&:hover {
+				text-decoration: underline;
+				text-underline-offset: 8px;
+				text-decoration-thickness: 4px;
+			}
+		}
+
+		.nav-language-flag {
+			aspect-ratio: 1 / 3;
+			width: (28/16rem);
+			height: (28/16rem);
+		}
+
+		.nav-li-link-selected {
+			font-weight: 700;
+			text-decoration: underline;
+			text-underline-offset: 8px;
+			text-decoration-thickness: 4px;
+		}
+
+		.nav-btn {
+			display: none !important;
+		}
+	}
+}
+
+/*-- ----------------------------------- -->
+<---     Desktop And Tablet Navigation     -->
+<--- ------------------------------------- -*/
+/*
+@media (min-width:801px) 50REM { //tablet, landscape iPad, lo-res laptops ands desktops  }
+@media (min-width:1025px) 64REM { // big landscape tablets, laptops, and desktops  }
+@media (min-width:1281px) 80REM { // hi-res laptops and desktops  }
+*/
+
+/* Small Desktop - 1024px */
+//@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 55rem) {
+	#header {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: fixed;
+		top: 0;
+		z-index: 1000;
+
+		.container {
+			gap: 0;
+		}
+
+		.navigation {
+			background-color: var(--navBackground);
+			border-radius: (12/16rem);
+			color: var(--primaryLight);
+			width: 84vw;
+			max-width: (860/16rem);
+			padding: (16/16rem) (16/16rem);
+			position: fixed;
+			top: (16/16rem);
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			box-shadow: var(
+				--buttonBoxShadow
+			); //box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+			z-index: 10000;
+			transition: opacity .3s ease-in;
+
+			.cs-toggle {
+				display: none;
+			}
+
+			.nav-language-mobile {
+				display: none !important;
+			}
+
+			.extra-enquire-link {
+				display: none !important;
+			}
+
+			.nav-logo {
+				width: 15%;
+				min-width: (100/16rem);
+				max-width: (350/16rem);
+				/* margin-right auto pushes everything away from it to the right */
+				margin: 0 auto 0 0;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				z-index: 100;
+
+				img {
+					width: 100%;
+					height: 100%;
+					/* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
+					object-fit: contain;
+					filter: invert(95%) sepia(16%) saturate(58%)
+						hue-rotate(126deg) brightness(98%) contrast(98%);
+				}
+			}
+
+			.nav {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.nav-ul {
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+				gap: (8/16rem);
+				margin-right: clamp(0.5rem, 5vw, (32/16rem));
+			}
+
+			.nav-li {
+				list-style: none;
+				padding: 0 0.5rem;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.nav-li-link {
+				font-size: 0.8rem;
+				font-weight: 500;
+				color: var(--primaryLight);
+				text-decoration: none;
+				text-transform: uppercase;
+				letter-spacing: (2/16rem);
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: (4/16rem);
+
+				&:hover {
+					//font-weight: 700;
+					text-decoration: underline;
+					text-underline-offset: 8px;
+					text-decoration-thickness: 4px;
+				}
+
+				&#nav-language-link:hover {
+					.nav-language-flag {
+						opacity: 0.6;
+					}
+				}
+			}
+
+			.nav-language-flag {
+				aspect-ratio: 1 / 3;
+				width: (28/16rem);
+				height: (28/16rem);
+			}
+
+			.nav-li-link-selected {
+				font-weight: 700;
+				text-decoration: underline;
+				text-underline-offset: 8px;
+				text-decoration-thickness: 4px;
+			}
+		}
+	}
+}

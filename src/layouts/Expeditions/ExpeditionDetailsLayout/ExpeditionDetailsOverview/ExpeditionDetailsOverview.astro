@@ -1,0 +1,64 @@
+---
+import "./ExpeditionDetailsOverview.less";
+import IconLabelValue from "../../../../components/IconLabelValue/IconLabelValue.astro";
+import locationSVG from "../../../../assets/svg/location.svg";
+import clockSVG from "../../../../assets/svg/clock.svg";
+import difficultySVG from "../../../../assets/svg/difficulty.svg";
+import altitudeSVG from "../../../../assets/svg/altitude.svg";
+import hikerSVG from "../../../../assets/svg/hiker.svg";
+import calendarSVG from "../../../../assets/svg/calendar.svg";
+import smileySVG from "../../../../assets/svg/smiley.svg";
+import ExpeditionDetailsInfoCard from "../../../../components/ExpeditionDetailsInfoCard/ExpeditionDetailsInfoCard.astro";
+const {frontmatter} = Astro.props;
+---
+<section id="overview" class="exped-details-section">
+	<div class="container">
+		<div class="exped-details-overview-content">
+			<h2 class="exped-details-section-title">Overview</h2>
+			
+				<IconLabelValue
+					type="column"
+					label="Location"
+					value={frontmatter.location}
+					imgSrc={locationSVG}
+				/>
+				<IconLabelValue
+					type="column"
+					label="Duration"
+					value={frontmatter.duration}
+					imgSrc={clockSVG}
+				/>
+				<IconLabelValue
+					type="column"
+					label="Difficulty"
+					value={frontmatter.difficulty}
+					imgSrc={difficultySVG}
+				/>
+				<IconLabelValue
+					type="column"
+					label="Altitude"
+					value={frontmatter.altitude}
+					imgSrc={altitudeSVG}
+				/>
+				<IconLabelValue
+					type="column"
+					label="Daily Activity"
+					value={frontmatter.dailyActivity}
+					imgSrc={hikerSVG}
+				/>
+				<IconLabelValue
+					type="column"
+					label="Season"
+					value={frontmatter.season}
+					imgSrc={calendarSVG}
+				/>
+				<ExpeditionDetailsInfoCard
+					iconSVG={smileySVG}
+					iconPosition="top"
+					title="Your Profile"
+					text="You have experience hiking and camping in the mountains, in all conditions.<br/>Previous acclimatization is necessary."
+				/>
+			
+		</div>
+	</div>
+</section>

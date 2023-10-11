@@ -1,0 +1,13 @@
+---
+import "./ExpeditionDetailsGallery.less";
+import ExpeditionGallery from "../../../../components/ExpeditionGallery/ExpeditionGallery.jsx";
+const { frontmatter } = Astro.props;
+---
+<section class="exped-details-section" id="gallery">
+	<div class="container">
+		<h2 class="exped-details-section-title">Gallery</h2>
+        <div class="exped-details-gallery-container">
+            <ExpeditionGallery client:visible />
+        </div>
+    </div>
+</section>

@@ -1,0 +1,13 @@
+---
+import "./IconLabelValue.less";
+import { Image } from "astro:assets";
+const { type, label, value, imgSrc } = Astro.props;
+---
+<!-- Icon (e.g. mail icon or phone icon) with a subtitle (e.g. MAIL) and a normal weight text (e.g. luclongin@gmail.com) -->
+<div class=`icon-and-label-and-value icon-label-value-${type}`>
+	<Image src={imgSrc} alt="Phone Icon" height="32" width="32" />
+	<div class="text-content">
+		<p class="subtitle">{label}</p>
+		<p class="bold">{value}</p>
+	</div>
+</div>

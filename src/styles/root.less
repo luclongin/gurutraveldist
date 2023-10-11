@@ -1,0 +1,447 @@
+:root {
+	/* remove this whole :root and put in your global css file that's shared on all pages, then just remove this section from all other Stitches you add later, only need this once in your global stylesheet */
+	--primary: #00bfff;
+	--primaryDark: #0094c6;
+	--primaryLight: #edf5f5;
+	--navBackground: #333333;
+	--secondary: #efefef;
+	--headerColor: #333333;
+	--bodyTextColor: #333333;
+	--bodyTextColorLight: #696969;
+	--bodyBackgroundColor: #fafafa;
+	--bodyBackgroundColorLight: #e5e5e5;
+
+	--buttonBoxShadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.25);
+	--buttonBoxShadowHover: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+	--scrollMarginTop: 9rem;
+
+	--swiper-navigation-color: #696969;
+	--swiper-pagination-color: #696969;
+	--swiper-pagination-bullet-width: clamp((12/16rem), 5vw, (16/16rem));
+	--swiper-pagination-bullet-height: clamp((12/16rem), 5vw, (16/16rem));
+	--swiper-pagination-bullet-horizontal-gap: 0.5rem;
+	--swiper-navigation-size: 32px !important;
+
+	/* 13px - 16px */
+	--topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+
+	/* 13px - 16px */
+	--subtitleFontSize: clamp(0.9rem, 1.6vw, 1rem);
+	/* 31px - 49px */
+
+	--headerFontSize: clamp((28/16rem), 4vw, (44/16rem));
+	//clamp(1.9375rem, 3.9vw, 3.0625rem);
+	--subheaderFontSize: clamp(0.6rem, 5vw, 1.6rem);
+	--bodyFontSize: clamp(0.8rem, 5vw, 1rem);
+	/* 60px - 100px top and bottom */
+	--sectionMargin: clamp(3.75rem, 7.82vw, 6.25rem) 2rem;
+	/* 60px - 100px top and bottom */
+	--sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 2rem;
+	--navPadding: 0 1.5rem;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+	scroll-behavior: smooth;
+	background-color: var(--bodyBackgroundColor);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+button,
+span,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+/* montserrat-300 - latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 300;
+	src: url("../assets/fonts/montserrat-v25-latin-300.woff2") format("woff2");
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* montserrat-regular - latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../assets/fonts/montserrat-v25-latin-regular.woff2")
+		format("woff2");
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* montserrat-500 - latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 500;
+	src: url("../assets/fonts/montserrat-v25-latin-500.woff2") format("woff2");
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* montserrat-600 - latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 600;
+	src: url("../assets/fonts/montserrat-v25-latin-600.woff2") format("woff2");
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* montserrat-700 - latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 700;
+	src: url("../assets/fonts/montserrat-v25-latin-700.woff2") format("woff2");
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* montserrat-800 - latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 800;
+	src: url("../assets/fonts/montserrat-v25-latin-800.woff2") format("woff2");
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* montserrat-900 - latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 900;
+	src: url("../assets/fonts/montserrat-v25-latin-900.woff2") format("woff2");
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	.display-mobile {
+		display: block;
+	}
+
+	.show-on-mobile {
+		display: block;
+	}
+
+	.hide-544 {
+		display: none;
+	}
+
+	.show-on-tablet {
+		display: none !important;
+	}
+
+	.hide-on-desktop {
+		display: block;
+	}
+
+	.show-on-desktop {
+		display: none !important;
+	}
+
+	.show-on-tablet {
+		display: none;
+	}
+
+	.hide-mobile,
+	.display-tablet {
+		display: none;
+	}
+
+	.bold {
+		font-weight: 600;
+	}
+
+	.bold500 {
+		font-weight: 500;
+	}
+
+	.dirt-bg-img {
+		position: relative;
+		width: 100vw !important;
+		height: 100vh !important;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 0;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0.8;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.background-overlay-diamond-right {
+		height: 100%;
+		width: 100%;
+		background: linear-gradient(
+					to bottom left,
+					#fafafa 0%,
+					rgba(173, 234, 255, 0.91) 0%,
+					rgba(167, 233, 255, 0.9) 0%,
+					#fafafa 20%
+				)
+				bottom left / 100% 50% no-repeat,
+			linear-gradient(
+					to top left,
+					#fafafa 0%,
+					rgba(173, 234, 255, 0.91) 0%,
+					rgba(167, 233, 255, 0.9) 0%,
+					#fafafa 20%
+				)
+				top left / 100% 50% no-repeat;
+	}
+
+	.background-overlay-diamond-right-strong {
+		height: 100%;
+		width: 100%;
+		background: linear-gradient(
+					to bottom left,
+					#fafafa 0%,
+					rgba(173, 234, 255, 0.91) 0%,
+					rgba(167, 233, 255, 0.9) 0%,
+					#fafafa 30%
+				)
+				bottom left / 100% 50% no-repeat,
+			linear-gradient(
+					to top left,
+					#fafafa 0%,
+					rgba(173, 234, 255, 0.91) 0%,
+					rgba(167, 233, 255, 0.9) 0%,
+					#fafafa 30%
+				)
+				top left / 100% 50% no-repeat;
+	}
+
+	.container {
+		width: 100%;
+		max-width: (550/16rem);
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* 48px - 108px */
+		gap: clamp(3rem, 6vw, 4rem);
+		//gap: clamp(3rem, 6vw + 1.1em, 6.75rem);
+	}
+
+	.content {
+		/* set text align to left if content needs to be left aligned */
+		text-align: left;
+		width: 100%;
+		max-width: (522/16rem);
+		display: flex;
+		flex-direction: column;
+		/* centers content horizontally, set to flex-start to left align */
+		align-items: flex-start;
+		position: relative;
+		z-index: 200;
+	}
+
+	.topper {
+		font-size: var(--topperFontSize);
+		line-height: 1.2em;
+		text-transform: uppercase;
+		text-align: inherit;
+		letter-spacing: (2/16rem);
+		font-weight: 700;
+		color: var(--primary);
+		margin-bottom: (4/16rem);
+		display: block;
+	}
+
+	.title {
+		font-size: var(--headerFontSize);
+		font-weight: 800;
+		line-height: 1.2em;
+		text-align: inherit;
+		max-width: (700/16rem);
+		margin: 0 0 (32/16rem) 0;
+		color: var(--headerColor);
+		position: relative;
+		text-transform: uppercase;
+		letter-spacing: (2/16rem);
+	}
+
+	.subtitle {
+		font-size: var(--subtitleFontSize);
+		font-weight: 500;
+		line-height: 1.2em;
+		text-align: inherit;
+		padding: 0;
+		text-transform: uppercase;
+		color: var(--bodyTextColorLight);
+		letter-spacing: (2/16rem);
+	}
+
+	.text {
+		font-size: var(--bodyFontSize);
+		line-height: 1.5em;
+		text-align: inherit;
+		width: 100%;
+		max-width: (650/16rem);
+		margin: 0;
+		color: var(--bodyTextColor);
+	}
+
+	.title {
+		max-width: 20ch;
+	}
+
+	.text {
+		/* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+		margin-bottom: (16/16rem);
+
+		&:last-of-type {
+			margin-bottom: (32/16rem);
+		}
+	}
+
+	.solid-btn {
+		font-size: 0.8rem;
+		/* 46px - 56px */
+		line-height: 3.4rem;
+		text-decoration: none;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: (2/16rem);
+		text-align: center;
+		margin: 0;
+		color: var(--primaryLight);
+		background: var(--primary);
+		max-height: 3.4rem;
+		padding: 0 1.25rem; //clamp(1.25rem, 5vw, 1.2rem);
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+		/* prevents padding from adding to the width */
+		box-sizing: border-box;
+		border-radius: (12/16rem);
+		box-shadow: var(
+			--buttonBoxShadow
+		); //0px (8/16rem) (8/16rem) 0px rgba(0, 0, 0, 0.25);
+
+		&:hover {
+			cursor: pointer;
+			background-color: var(--primaryDark);
+			box-shadow: var(
+				--buttonBoxShadowHover
+			); //0px (4/16rem) (4/16rem) 0px rgba(0, 0, 0, 0.25);
+		}
+	}
+}
+
+/** 544 px */
+@media only screen and (min-width: 34rem) {
+	.hide-544 {
+		display: block !important;
+	}
+}
+
+/* Table - 768px */
+@media only screen and (min-width: 48rem) {
+	.show-on-tablet {
+		display: block !important;
+	}
+
+	.show-on-mobile {
+		display: none !important;
+	}
+
+	.hide-tablet {
+		display: none !important;
+	}
+
+	.display-tablet {
+		display: block !important;
+	}
+
+	.show-on-tablet {
+		display: block;
+	}
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+	
+	.show-on-tablet {
+		display: none !important;
+	}
+
+	.hide-on-desktop {
+		display: none !important;
+	}
+
+	.show-on-desktop {
+		display: flex !important;
+	}
+
+	.hide-mobile {
+		display: block !important;
+	}
+
+	.display-mobile {
+		display: none !important;
+	}
+
+	.hide-desktop {
+		display: none;
+	}
+
+	.container {
+		max-width: (1280/16rem);
+		//max-width: 100%;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.solid-btn {
+		line-height: clamp(3em, 5.5vw, 3.1rem);
+		max-height: 3.1rem;
+	}
+}

@@ -1,0 +1,10 @@
+---
+import "./ExpeditionDetailsInfoCard.less";
+const {iconSVG, title, text, iconPosition} = Astro.props;
+import { Image } from "astro:assets";
+---
+<div class="exped-details-info-card">
+    <p class="subtitle exped-details-info-card-title">{title}</p>
+    <p class="exped-details-info-card-text" set:html={text}></p>
+    <Image class={iconPosition} src={iconSVG} alt="Expedition Details Smiley Icon" width={80} height={80} />
+</div>

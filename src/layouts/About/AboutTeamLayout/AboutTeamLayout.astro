@@ -1,0 +1,204 @@
+---
+import "./AboutTeamLayout.less";
+import { Image } from "astro:assets";
+import guide1 from "../../../assets/images/ali-kazal-mpPfqvh04Fc-unsplash.jpg";
+import guide1Mobile from "../../../assets/images/ali-kazal-mpPfqvh04Fc-unsplash-m.jpg";
+import guide2 from "../../../assets/images/elizeu-dias-2EGNqazbAMk-unsplash.jpg";
+import guide2Mobile from "../../../assets/images/elizeu-dias-2EGNqazbAMk-unsplash-m.jpg";
+import guide3 from "../../../assets/images/john-alvin-merin-qr59TXrtwr8-unsplash.jpg";
+import guide4 from "../../../assets/images/jeffrey-keenan-W-hoDkGRPes-unsplash.jpg";
+import guide4Mobile from "../../../assets/images/jeffrey-keenan-W-hoDkGRPes-unsplash.jpg";
+import guide5 from "../../../assets/images/irene-strong-v2aKnjMbP_k-unsplash.jpg";
+import guide5Mobile from "../../../assets/images/irene-strong-v2aKnjMbP_k-unsplash-m.jpg";
+import plusIcon from "../../../assets/svg/icons8-plus-60.png";
+import chevronDown from "../../../assets/svg/icons8-flecha-ampliar-64.png";
+---
+<section id="about-team-section">
+    <div class="container">
+        <div class="content">
+            <span class="topper">The Team</span>
+			<h2 class="section-title title about-team-title">
+				Meet your guides
+			</h2>
+        </div>
+        <div class="wrap">
+            <div class="guide-gallery">
+                <div class="guide-container">
+                    <input type="checkbox" name="guide" id="guide1">
+                    <label for="guide1">
+                        <div class="guide-img-overlay"></div>
+                        <Image class="up-icon" src={chevronDown} alt="Expand Guide Information" aria-label="Expand Guide Information" width={40} height={40} />
+                        <Image class="down-icon" src={chevronDown} alt="Expand Guide Information" aria-label="Expand Guide Information" width={40} height={40} />
+                        <picture class="guide-img">
+                            <source
+                                media="(max-width: 480px)"
+                                srcset={guide1Mobile.src}
+                            />
+                            <source
+                                media="(min-width: 480px)"
+                                srcset={guide1.src}
+                            />
+                            <img
+                                loading="lazy"
+                                decoding="async"
+                                src={guide1.src}
+                                alt="person gardening"
+                                width="400"
+                                height="200"
+                            />
+                        </picture>
+                    </label>
+                    <div class="guide-collapsible">
+                        <p class="subtitle guide-collapsible-guide-name bold">Javier Huam&aacute;n</p>
+                        <p class="subtitle text">Certified mountain guide</p>
+                        <p class="text">15 years of experience introducing clients to the magic of the Andes. </p>
+                        <div class="guide-collapsible-fun-fact">
+                            <p class="subtitle">Fun Fact</p>
+                            <p class="text">Can spot and name all the wildlife found on your adventure.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="guide-container">
+                    <input type="checkbox" name="guide" id="guide2">
+                    <label for="guide2">
+                        <div class="guide-img-overlay"></div>
+                        <Image class="up-icon" src={chevronDown} alt="Expand Guide Information" aria-label="Expand Guide Information" width={40} height={40} />
+                        <Image class="down-icon" src={chevronDown} alt="Expand Guide Information" aria-label="Expand Guide Information" width={40} height={40} />
+                        <picture class="guide-img">
+                            <source
+                                media="(max-width: 480px)"
+                                srcset={guide2Mobile.src}
+                            />
+                            <source
+                                media="(min-width: 480px)"
+                                srcset={guide2.src}
+                            />
+                            <img
+                                loading="lazy"
+                                decoding="async"
+                                src={guide2.src}
+                                alt="person gardening"
+                                width="400"
+                                height="200"
+                            />
+                        </picture>
+                    </label>
+                    <div class="guide-collapsible">
+                        <p class="subtitle guide-collapsible-guide-name bold">Javier Huam&aacute;n</p>
+                        <p class="subtitle text">Certified mountain guide</p>
+                        <p class="text">15 years of experience introducing clients to the magic of the Andes. </p>
+                        <div class="guide-collapsible-fun-fact">
+                            <p class="subtitle">Fun Fact</p>
+                            <p class="text">Can spot and name all the wildlife found on your adventure.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="guide-container">
+                    <input type="checkbox" name="guide" id="guide3">
+                    <label for="guide3">
+                        <div class="guide-img-overlay"></div>
+                        <Image class="up-icon" src={chevronDown} alt="Expand Guide Information" aria-label="Expand Guide Information" width={40} height={40} />
+                        <Image class="down-icon" src={chevronDown} alt="Expand Guide Information" aria-label="Expand Guide Information" width={40} height={40} />
+                        <picture class="guide-img">
+                            <source
+                                media="(max-width: 480px)"
+                                srcset={guide3.src}
+                            />
+                            <source
+                                media="(min-width: 480px)"
+                                srcset={guide3.src}
+                            />
+                            <img
+                                loading="lazy"
+                                decoding="async"
+                                src={guide3.src}
+                                alt="person gardening"
+                                width="400"
+                                height="200"
+                            />
+                        </picture>
+                    </label>
+                    <div class="guide-collapsible">
+                        <p class="subtitle guide-collapsible-guide-name bold">Javier Huam&aacute;n</p>
+                        <p class="subtitle text">Certified mountain guide</p>
+                        <p class="text">15 years of experience introducing clients to the magic of the Andes. </p>
+                        <div class="guide-collapsible-fun-fact">
+                            <p class="subtitle">Fun Fact</p>
+                            <p class="text">Can spot and name all the wildlife found on your adventure.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="guide-container">
+                    <input type="checkbox" name="guide" id="guide4">
+                    <label for="guide4">
+                        <div class="guide-img-overlay"></div>
+                        <Image class="up-icon" src={chevronDown} alt="Expand Guide Information" aria-label="Expand Guide Information" width={40} height={40} />
+                        <Image class="down-icon" src={chevronDown} alt="Expand Guide Information" aria-label="Expand Guide Information" width={40} height={40} />
+                        <picture class="guide-img">
+                            <source
+                                media="(max-width: 480px)"
+                                srcset={guide4Mobile.src}
+                            />
+                            <source
+                                media="(min-width: 480px)"
+                                srcset={guide4.src}
+                            />
+                            <img
+                                loading="lazy"
+                                decoding="async"
+                                src={guide4.src}
+                                alt="person gardening"
+                                width="400"
+                                height="200"
+                            />
+                        </picture>
+                    </label>
+                    <div class="guide-collapsible">
+                        <p class="subtitle guide-collapsible-guide-name bold">Javier Huam&aacute;n</p>
+                        <p class="subtitle text">Certified mountain guide</p>
+                        <p class="text">15 years of experience introducing clients to the magic of the Andes. </p>
+                        <div class="guide-collapsible-fun-fact">
+                            <p class="subtitle">Fun Fact</p>
+                            <p class="text">Can spot and name all the wildlife found on your adventure.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="guide-container">
+                    <input type="checkbox" name="guide" id="guide5">
+                    <label for="guide5">
+                        <div class="guide-img-overlay"></div>
+                        <Image class="up-icon" src={chevronDown} alt="Expand Guide Information" aria-label="Expand Guide Information" width={40} height={40} />
+                        <Image class="down-icon" src={chevronDown} alt="Expand Guide Information" aria-label="Expand Guide Information" width={40} height={40} />
+                        <picture class="guide-img">
+                            <source
+                                media="(max-width: 480px)"
+                                srcset={guide5Mobile.src}
+                            />
+                            <source
+                                media="(min-width: 480px)"
+                                srcset={guide5.src}
+                            />
+                            <img
+                                loading="lazy"
+                                decoding="async"
+                                src={guide5.src}
+                                alt="person gardening"
+                                width="400"
+                                height="200"
+                            />
+                        </picture>
+                    </label>
+                    <div class="guide-collapsible">
+                        <p class="subtitle guide-collapsible-guide-name bold">Javier Huam&aacute;n</p>
+                        <p class="subtitle text">Certified mountain guide</p>
+                        <p class="text">15 years of experience introducing clients to the magic of the Andes. </p>
+                        <div class="guide-collapsible-fun-fact">
+                            <p class="subtitle">Fun Fact</p>
+                            <p class="text">Can spot and name all the wildlife found on your adventure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>	
+        </div>
+    </div>
+</section>

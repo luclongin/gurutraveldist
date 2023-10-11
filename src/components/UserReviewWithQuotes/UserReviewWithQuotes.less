@@ -1,0 +1,57 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    .review-quote {
+        position: relative;
+        color: var(--bodyTextColor);
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 2rem 0;
+    }
+
+    .review-left-quote, .review-right-quote {
+        filter: invert(100%) sepia(0%) saturate(6062%) hue-rotate(149deg) brightness(118%) contrast(80%);
+        width: clamp((104/16rem), 25vw, (152/16rem));
+        aspect-ratio: 1 / 1;
+        height: auto;
+        z-index: 0;
+        opacity: 0.6;
+    }
+
+    .review-left-quote {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .review-right-quote {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .review-content {
+        position: relative;
+        z-index: 1;
+        margin-top: clamp(3rem, 20vw, 5rem);
+        max-width: (450/16rem);
+    }
+
+}
+
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    
+    .review-content {
+        margin: 1rem clamp(3rem, 15vw, 4rem) 0;
+    }
+
+    .review-left-quote, .review-right-quote {
+        position: relative;
+        width: clamp((152/16rem), 15vw, (192/16rem));
+        height: clamp((152/16rem), 15vw, (192/16rem));
+
+    }
+}

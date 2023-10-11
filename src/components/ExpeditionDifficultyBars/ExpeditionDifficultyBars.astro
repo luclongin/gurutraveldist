@@ -1,0 +1,27 @@
+---
+import "./ExpeditionDifficultyBars.less";
+const {difficulty} = Astro.props;
+const diffToCount = {
+    "beginner": 1,
+    "moderate": 2,
+    "advanced": 3
+};
+const myArr = Array.from(Array(diffToCount[difficulty]).keys())
+---
+<div class="expedition-difficulty-bars">
+    {
+        (difficulty == "beginner") && 
+        <div class="bar"></div>
+    }
+    {
+        (difficulty == "moderate") && 
+        <div class="bar"></div>
+        <div class="bar"></div>
+    }
+    {
+        (difficulty == "advanced") && 
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    }
+</div>

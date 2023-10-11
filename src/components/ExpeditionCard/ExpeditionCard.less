@@ -1,0 +1,171 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	.expedition-card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+		gap: 1rem;
+		margin-bottom: 2rem;
+
+		&:hover {
+			cursor: pointer;
+			.expedition-card-hover {
+				display: flex !important;
+			}
+		}
+
+		&.hidden {
+			display: none;
+		}
+
+		.expedition-img-container {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			box-shadow: var(--buttonBoxShadow);
+			border-radius: (12/16rem);
+            overflow: hidden;
+
+			&:hover {
+				box-shadow: var(--buttonBoxShadowHover);
+			}
+
+			.expedition-img-overlay {
+				background-image: linear-gradient(
+					0deg,
+					rgba(0, 0, 0, 0.82) 25%,
+					rgba(0, 0, 0, 0.43) 40%,
+					rgba(255, 255, 255, 0) 50%
+				);
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+
+			.expedition-card-hover {
+				background-color: rgba(20, 20, 20, 0.7);
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				top: 0;
+				left: 0;
+				z-index: 3;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+				display: none;
+
+				p {
+					font-size: var(--bodyFontSize);
+					color: var(--primaryLight);
+					text-transform: uppercase;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 120%;
+					letter-spacing: (2/16rem);
+				}
+			}
+
+			.expedition-card-img {
+				display: block;
+				position: relative;
+				width: 100%;
+				height: 100%;
+				z-index: 0;
+				height: (176/16rem);
+
+				img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+
+			.expedition-img-container-content {
+				color: var(--primaryLight);
+				position: absolute;
+				bottom: 1rem;
+				left: 0;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				padding: 0 (16/16rem);
+				z-index: 2;
+				width: calc(100% - 2rem);
+
+				.expedition-name {
+					width: 40%;
+					font-weight: 700;
+					color: var(--primaryLight);
+				}
+
+				.expedition-difficulty-text {
+					margin-top: (4/16rem);
+					color: var(--primaryLight);
+					font-size: var(--bodyFontSize);
+					font-variant: all-small-caps;
+				}
+			}
+		}
+
+		.expedition-content {
+			color: var(--bodyTextColorLight);
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+
+			.expedition-content-stats {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				gap: 1rem;
+
+				.expedition-altitude,
+				.expedition-duration {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					letter-spacing: (1/16rem);
+
+					p {
+						font-size: var(--bodyFontSize);
+						margin-left: (4/16rem);
+					}
+				}
+			}
+
+			.expedition-description-text {
+				line-height: 120%;
+				font-size: var(--bodyFontSize);
+			}
+		}
+	}
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 38rem) {
+	.expedition-card {
+		width: calc(50% - 0.5rem);
+		height: auto;
+
+		.expedition-card-img {
+			height: (240/16rem) !important;
+		}
+	}
+}
+
+@media only screen and (min-width: 60rem) {
+	.expedition-card {
+		width: calc(33% - 0.5rem);
+	}
+}

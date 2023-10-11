@@ -1,0 +1,85 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	#itinerary {
+		// Padding for scrolling
+    	// to not hide the title
+		scroll-margin-top: var(--scrollMarginTop);
+		scroll-snap-margin-top: var(--scrollMarginTop); /* iOS 11 and older */
+
+		.container {
+			.itinerary-map-img {
+				width: 100%;
+				border-radius: (12/16rem);
+				height: auto;
+				object-fit: contain;
+			}
+
+			.exped-details-itinerary-steps-container {
+				width: 100%;
+
+				.exped-details-itinerary-step {
+					width: 100%;
+
+					.topper {
+						font-weight: 600;
+					}
+
+					.itinerary-name {
+						text-transform: uppercase;
+						letter-spacing: (2/16rem);
+						font-size: 1.2rem;
+						font-weight: 600;
+						margin: 0 0 1rem;
+					}
+
+					.text {
+						max-width: none;
+					}
+				}
+
+				#extra-itinerary-container {
+					display: none;
+				}
+
+				#see-all-itinerary-btn-input,
+				#see-less-itinerary-btn-input {
+					display: none;
+				}
+
+				#see-all-itinerary-btn-input {
+					display: none;
+
+					&:checked ~ label {
+						display: none;
+					}
+
+					&:checked ~ #extra-itinerary-container {
+						display: block;
+					}
+
+					&:checked ~ .see-less-btn {
+						display: flex;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Tablet - 736px */
+@media only screen and (min-width: 46rem) {
+	#itinerary {
+		.container {
+
+		}
+	}
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+	#itinerary {
+		.container {
+			max-width: 60rem;
+		}
+	}
+}

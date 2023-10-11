@@ -1,0 +1,36 @@
+
+.mySwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  bottom: 0 !important;
+}
+
+.swiper-slide {
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+  .swiper-button-next {
+    color: #e5e5e5;
+  }
+
+  .swiper-pagination-bullet-active {
+    height: clamp(1.25rem, 5vw, 1.5rem) !important;
+    width: clamp(1.25rem, 5vw, 1.5rem) !important;
+  }
+

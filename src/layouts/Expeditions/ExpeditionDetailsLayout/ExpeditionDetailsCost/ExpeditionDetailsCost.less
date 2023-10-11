@@ -1,0 +1,54 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	#cost {
+		// Padding for scrolling
+    	// to not hide the title
+		scroll-margin-top: var(--scrollMarginTop);
+		scroll-snap-margin-top: var(--scrollMarginTop); /* iOS 11 and older */
+
+        .exped-details-section-title {
+            margin-bottom: 0;
+        }
+
+		.text {
+			width: fit-content;
+			margin-bottom: 0;
+			color: var(--bodyTextColorLight);
+		}
+
+        .price-list {
+            width: 100%;
+            
+            li {
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: clamp(1.5rem, 5vw, 2rem);
+                margin-bottom: .5rem;
+
+                .price-list-key {
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    letter-spacing: (2/16rem);
+                    width: (160/16rem);
+                }
+
+                .price-list-value {
+                    width: (200/16rem);
+                    .bold {
+                        color: var(--bodyTextColor);
+                    }
+                }
+            }
+        }
+	}
+}
+
+/* Tablet - 736px */
+@media only screen and (min-width: 46rem) {
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+}

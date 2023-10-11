@@ -1,0 +1,12 @@
+---
+import "./IconAndLabel.less";
+import { Image } from "astro:assets";
+const { value, imgSrc } = Astro.props;
+---
+<!-- Icon (e.g. mail icon or phone icon) with a bold text -->
+<div class="icon-and-label">
+    <Image src={imgSrc} alt="Icon And Label" height="32" width="32" />	
+	<div class="text-content">	
+		<p class="bold">{value}</p>
+	</div>		
+</div>

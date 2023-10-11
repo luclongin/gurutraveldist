@@ -1,0 +1,15 @@
+---
+import "./SelectDropDown.less";
+const {name, label} = Astro.props;
+---
+<div class="select-dropdown-container">
+    <label class="select-dropdown-label" for={name}>{label}</label>
+    <select name={name} class="select-dropdown">
+        <option>Overview</option>
+        <option selected>What's included</option>
+        <option value="#exped-details-itinerary-section">Itinerary</option>
+        <option>Cost</option>
+        <option>Gallery</option>
+        <option>Practical info</option>
+    </select>
+</div>

@@ -1,0 +1,13 @@
+---
+import "./SeeLessButton.less";
+import minusIcon from "../../assets/svg/minus.svg";
+import { Image } from "astro:assets";
+import minusBoldBlueIcon from "../../assets/svg/minusBoldBlue.svg";
+const {seeLessText, type} = Astro.props;
+---
+<input type="checkbox" name=`see-all-${type}-btn-input` id=`see-all-${type}-btn-input`>
+<label for=`see-all-${type}-btn-input` class="subtitle see-all-btn see-less-btn" >
+    <Image class="default-plus-icon" src={minusIcon} alt="See More" height={20} width={20} />
+    <Image class="bold-plus-icon" src={minusBoldBlueIcon} alt="See More" height={20} width={20} />
+    {seeLessText}
+</label>

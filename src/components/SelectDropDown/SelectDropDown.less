@@ -1,0 +1,44 @@
+.select-dropdown-container {
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+	width: 100%;
+}
+
+.select-dropdown-label {
+	font-size: var(--bodyFontSize);
+	color: var(--bodyTextColorLight);
+	text-transform: uppercase;
+	font-variant: small-caps;
+	font-weight: 500;
+	max-width: (400/16rem);
+	letter-spacing: (2/16rem);
+}
+
+.select-dropdown {
+	width: 90%;//(264/16rem);
+	max-width: (400/16rem);
+	height: (56/16rem);
+	border-radius: (12/16rem);
+	border: 2px solid rgba(200, 200, 200, 1);
+	
+	padding-left: 1.5rem;
+	background: rgba(250, 250, 250, 0.7);
+	letter-spacing: (2/16rem);
+	font-weight: 500;
+	font-family: inherit;
+	text-transform: uppercase;
+	font-variant: small-caps;
+	color: var(--bodyTextColorLight);
+	font-size: var(--bodyFontSize);
+	cursor: pointer;
+
+	// changing select icon
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-image: url("../../assets/svg/caret-down-grey.svg");
+	background-repeat: no-repeat, repeat;
+	background-position: right 1em top 50%, 0 0;
+	background-size: 1.2rem auto, 100%;
+}

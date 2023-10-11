@@ -1,0 +1,21 @@
+---
+const { title, cardClass, imgSrc } = Astro.props;
+import "./ImgCardwithOverlay.less";
+---
+<!-- Flexible image with black overlay at the bottom for white text -->
+<div class=`img-card-overlay ${cardClass}`>
+	<div class=`img-overlay`></div>
+	<picture class=`img-card-overlay-img`>
+		<source media="(max-width: 480px)" srcset={imgSrc} />
+		<source media="(min-width: 480px)" srcset={imgSrc} />
+		<img
+			loading="lazy"
+			decoding="async"
+			srcset={imgSrc}
+			alt="people outside"
+			width="254"
+			height="262"
+		/>
+	</picture>
+	<p class="img-card-overlay-text">{title}</p>
+</div>

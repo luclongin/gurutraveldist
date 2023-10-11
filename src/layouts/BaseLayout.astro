@@ -1,0 +1,29 @@
+---
+import Navigation from "../components/Navigation/Navigation.astro";
+import "../styles/root.less";
+import Footer from "../layouts/Footer/Footer.astro";
+import HomeEnquireLayout from "../layouts/Homepage/HomeEnquireLayout/HomeEnquireLayout.astro";
+import dirtImage from "../assets/images/grain-white-1200-opac18.png";
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Document</title>
+	</head>
+	<body>
+		 <!-- Background Image -->
+		 <picture class="dirt-bg-img">
+			<source media="(max-width: 600px)" srcset={dirtImage.src}>
+			<source media="(min-width: 601px)" srcset={dirtImage.src}>
+			<img aria-hidden="true" loading="lazy" decoding="async" src={dirtImage.src} alt="kitchen cabinets" width="1920" height="1280">
+		</picture>
+		<Navigation />
+
+        <!-- Here will be inserted page-specific components -->
+        <slot></slot>
+		<HomeEnquireLayout />
+		<Footer />
+	</body>
+</html>

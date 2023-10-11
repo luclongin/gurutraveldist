@@ -1,0 +1,112 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	.all-expeditions-section {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding: var(--sectionPadding);
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			max-width: (840/16rem);
+		}
+
+		.all-expetitions-container {
+			position: relative;
+
+			.content {
+				max-width: (840/16rem);
+			}
+
+			.trek-content {
+				margin-top: 3rem;
+			}
+		}
+
+		.see-all-btn-container {
+			display: flex;
+			flex-direction: row;
+			justify-self: center;
+			align-items: center;
+		}
+
+		#extra-climbs-container, #extra-treks-container {
+			display: none;
+		}
+
+		#see-all-climbs-btn-input {
+			display: none;
+
+			&:checked ~ label {
+				display: none;
+			}
+
+			&:checked ~ #extra-climbs-container {
+				display: block;
+			}
+
+			&:checked ~ .see-less-btn {
+				display: flex;
+			}
+		}
+
+		#see-all-treks-btn-input {
+			display: none;
+
+			&:checked ~ label {
+				display: none;
+			}
+
+			&:checked ~ #extra-treks-container {
+				display: block;
+				transition: all 0.5s ease;
+			}
+
+			&:checked ~ .see-less-btn {
+				display: flex;
+			}
+		}
+	}
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 38rem) {
+	.all-expeditions-section {
+		display: flex;
+		flex-direction: row;
+		padding: var(--sectionPadding);
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: fit-content;
+			max-width: 66.5rem !important;
+		}
+
+		.all-expetitions-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			gap: 1rem;
+		}
+
+		#see-all-climbs-btn-input {
+			&:checked ~ #extra-climbs-container {
+				display: flex;
+			}
+		}
+
+		#see-all-treks-btn-input {
+			&:checked ~ #extra-treks-container {
+				display: flex;
+			}
+		}
+	}
+}

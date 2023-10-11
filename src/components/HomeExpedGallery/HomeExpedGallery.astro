@@ -1,0 +1,15 @@
+---
+import './HomeExpedGallery.less';
+import Trek1Img from "../../assets/images/trek-1.jpg";
+import Trek2Img from "../../assets/images/trek-2.jpg";
+import Climb1Img from "../../assets/images/climb-1.jpg";
+import Climb2Img from "../../assets/images/climb-2.jpg";
+import ImgCardwithOverlay from '../ImgCardwithOverlay/ImgCardwithOverlay.astro';
+---
+<!-- Gallery component in a specific order for this layout. Still need to find a way to name the different galleries. -->
+<div class="exped-images-container">
+    <ImgCardwithOverlay title="Santa Cruz Trek" imgSrc={Trek1Img.src}/>
+    <ImgCardwithOverlay title="Alpamayo Summit" imgSrc={Climb2Img.src} />
+    <ImgCardwithOverlay title="Pisco Mountain" imgSrc={Climb1Img.src} />
+    <ImgCardwithOverlay title="Huayhuash Circuit" imgSrc={Trek2Img.src} />
+</div>

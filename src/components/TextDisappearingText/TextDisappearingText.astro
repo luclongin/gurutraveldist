@@ -1,0 +1,33 @@
+---
+const {topTextTitle, bottomTextTitle, imgSrc, imgSrcMobile} = Astro.props;
+import './TextWithDisappearingImg.less';
+
+
+---
+<div class="text-with-disappearing-img">
+    <div class="content">
+        <h2 class="title">{topTextTitle}</h2>
+        <slot name="topText"></slot>
+    </div>
+    <div class="image-container">
+        <div class="white-img-overlay"></div>
+        <div class="white-img-overlay2"></div>
+
+        <picture class=`disappearing-img`>
+			<source media="(max-width: 900px)" srcset={imgSrcMobile}>
+			<source media="(min-width: 901px)" srcset={imgSrc}>
+            <img
+                loading="lazy"
+                decoding="async"
+                srcset={imgSrc}
+                alt="people outside"
+                width="254"
+                height="262"
+            />
+        </picture>
+    </div>
+    <div class="content">
+        <h2 class="title">{bottomTextTitle}</h2>
+        <slot name="bottomText"></slot>
+    </div>
+</div>

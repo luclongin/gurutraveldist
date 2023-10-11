@@ -1,0 +1,210 @@
+---
+import './HomeGalleryLayout.less';
+import Image1 from "../../../assets/images/climb-1.jpg";
+import Image2 from "../../../assets/images/what-we-offer.jpg";
+import Image3 from "../../../assets/images/trek-3.jpg";
+import Image4 from "../../../assets/images/hero/tiago-rosado-cMG5qjpnsyg-unsplash.webp";
+import Climb1Img from "../../../assets/images/climb-1.jpg";
+import Climb2Img from "../../../assets/images/climb-2.jpg";
+import Climb3Img from "../../../assets/images/climb-3.jpg";
+import Climb4Img from "../../../assets/images/climb-4.jpg";
+import Trek1Img from "../../../assets/images/trek-1.jpg";
+import Trek2Img from "../../../assets/images/trek-2.jpg";
+import Trek3Img from "../../../assets/images/trek-3.jpg";
+import Trek4Img from "../../../assets/images/trek-4.jpg";
+---
+<!-- ============================================ -->
+<!--           Homepage - Gallery Section         -->
+<!-- ============================================ -->
+<section id="home-gallery-section">
+	<div class="container">
+        <div class="home-gallery-images-container">
+            <picture class="home-gallery-img">
+                <source
+                    media="(max-width: 480px)"
+                    srcset={Climb4Img.src}
+                />
+                <source
+                    media="(min-width: 480px)"
+                    srcset={Climb4Img.src}
+                />
+                <img
+                    loading="lazy"
+                    decoding="async"
+                    src={Climb4Img.src}
+                    alt="person gardening"
+                    width="400"
+                    height="200"
+                />
+            </picture>
+            <picture class="home-gallery-img">
+                <source
+                    media="(max-width: 480px)"
+                    srcset={Climb1Img.src}
+                />
+                <source
+                    media="(min-width: 480px)"
+                    srcset={Climb1Img.src}
+                />
+                <img
+                    loading="lazy"
+                    decoding="async"
+                    src={Climb1Img.src}
+                    alt="person gardening"
+                    width="400"
+                    height="200"
+                />
+            </picture>
+            <picture class="home-gallery-img">
+                <source
+                    media="(max-width: 480px)"
+                    srcset={Climb2Img.src}
+                />
+                <source
+                    media="(min-width: 480px)"
+                    srcset={Climb2Img.src}
+                />
+                <img
+                    loading="lazy"
+                    decoding="async"
+                    src={Climb2Img.src}
+                    alt="person gardening"
+                    width="400"
+                    height="200"
+                />
+            </picture>
+            <picture class="home-gallery-img">
+                <source
+                    media="(max-width: 480px)"
+                    srcset={Climb3Img.src}
+                />
+                <source
+                    media="(min-width: 480px)"
+                    srcset={Climb3Img.src}
+                />
+                <img
+                    loading="lazy"
+                    decoding="async"
+                    src={Climb3Img.src}
+                    alt="person gardening"
+                    width="400"
+                    height="200"
+                />
+            </picture>
+            <picture class="home-gallery-img">
+                <source
+                    media="(max-width: 480px)"
+                    srcset={Trek1Img.src}
+                />
+                <source
+                    media="(min-width: 480px)"
+                    srcset={Trek1Img.src}
+                />
+                <img
+                    loading="lazy"
+                    decoding="async"
+                    src={Trek1Img.src}
+                    alt="person gardening"
+                    width="400"
+                    height="200"
+                />
+            </picture><picture class="home-gallery-img">
+                <source
+                    media="(max-width: 480px)"
+                    srcset={Trek2Img.src}
+                />
+                <source
+                    media="(min-width: 480px)"
+                    srcset={Trek2Img.src}
+                />
+                <img
+                    loading="lazy"
+                    decoding="async"
+                    src={Trek2Img.src}
+                    alt="person gardening"
+                    width="400"
+                    height="200"
+                />
+            </picture>
+            <picture class="home-gallery-img">
+                <source
+                    media="(max-width: 480px)"
+                    srcset={Image3.src}
+                />
+                <source
+                    media="(min-width: 480px)"
+                    srcset={Image3.src}
+                />
+                <img
+                    loading="lazy"
+                    decoding="async"
+                    src={Image3.src}
+                    alt="person gardening"
+                    width="400"
+                    height="200"
+                />
+            </picture>
+            <picture class="home-gallery-img">
+                <source
+                    media="(max-width: 480px)"
+                    srcset={Image1.src}
+                />
+                <source
+                    media="(min-width: 480px)"
+                    srcset={Image1.src}
+                />
+                <img
+                    loading="lazy"
+                    decoding="async"
+                    src={Image1.src}
+                    alt="person gardening"
+                    width="400"
+                    height="200"
+                />
+            </picture>
+            <picture class="home-gallery-img">
+                <source
+                    media="(max-width: 480px)"
+                    srcset={Climb2Img.src}
+                />
+                <source
+                    media="(min-width: 480px)"
+                    srcset={Climb2Img.src}
+                />
+                <img
+                    loading="lazy"
+                    decoding="async"
+                    src={Climb2Img.src}
+                    alt="person gardening"
+                    width="400"
+                    height="200"
+                />
+            </picture>
+            <picture class="home-gallery-img show-on-tablet">
+                <source
+                    media="(max-width: 480px)"
+                    srcset={Trek3Img.src}
+                />
+                <source
+                    media="(min-width: 480px)"
+                    srcset={Trek3Img.src}
+                />
+                <img
+                    loading="lazy"
+                    decoding="async"
+                    src={Trek3Img.src}
+                    alt="person gardening"
+                    width="400"
+                    height="200"
+                />
+            </picture>
+        </div>
+        <div class="content">
+            <span class="topper">Gallery</span>
+            <h2 class="section-title title gallery-title">
+                We help capture unforgettable memories
+            </h2>
+            <a href="/gallery" class="solid-btn gallery-section-btn">View Gallery</a>
+        </div>
+    </div>
+</section>

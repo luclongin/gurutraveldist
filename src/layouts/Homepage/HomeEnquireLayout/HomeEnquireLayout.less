@@ -1,0 +1,153 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    // Padding for scrolling
+    // to not hide the title
+	#enquire {
+		scroll-margin-top: (144/16rem);
+		scroll-snap-margin-top: (144/16rem); /* iOS 11 and older */
+	}
+
+	#home-enquire-section {
+		padding: var(--sectionPadding);
+
+		.container {
+			align-items: flex-start;
+			gap: clamp(2rem, 5vw, 2.5rem);
+		}
+
+		.home-enquire-images-container {
+			width: 100%;
+			max-width: 32.625rem;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+		}
+
+		.img-card-overlay-img {
+			width: 100%;
+			//max-width: (404/16rem);
+			min-height: clamp((418/16rem), 25vw, (800/16rem));
+			height: 100%;
+			// max-height: (624/16rem);
+			aspect-ratio: 1 / 1;
+			position: relative;
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				border-radius: (12/16rem);
+			}
+		}
+
+		.img-card-overlay-text {
+			font-size: calc(var(--headerFontSize) * 0.9);
+			position: absolute;
+			bottom: 2rem;
+			left: 2rem;
+			color: var(--primaryLight);
+			z-index: 10;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: (2/16rem);
+		}
+
+		.dotted-line {
+			margin: 0.5rem 0;
+			border-bottom: 4px dashed var(--bodyBackgroundColorLight);
+			width: 100%;
+		}
+
+		.subtitle {
+			opacity: 0.9;
+		}
+
+		.enquire-maps-container {
+			margin-top: 1rem;
+			border-radius: (12/16rem);
+			overflow: hidden;
+		}
+
+		.enquire-office-address {
+			margin-top: (24/16rem);
+			display: flex;
+			flex-direction: column;
+			gap: (8/16rem);
+		}
+
+		.enquire-office-hours-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			gap: (8/16rem);
+			margin-top: (8/16rem);
+		}
+
+		.enquire-office-hours {
+			display: flex;
+			flex-direction: row;
+			align-items: baseline;
+			gap: (8/16rem);
+			vertical-align: baseline;
+			color: var(--bodyTextColorLight);
+			font-weight: 400;
+		}
+	}
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+	#home-enquire-section {
+		padding: var(--sectionPadding);
+
+		.container {
+			flex-direction: row;
+			max-width: 66.5rem !important;
+		}
+
+		.content {
+			width: min-content;
+		}
+
+		.enquire-maps-container {
+			iframe {
+				width: (336/16rem);
+			}
+		}
+
+		.img-card-overlay-img {
+			aspect-ratio: 1 / 2;
+			width: 100%;
+			max-width: none;
+			max-height: (760/16rem);
+		}
+	}
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+	#home-enquire-section {
+		padding: var(--sectionPadding);
+
+		.container {
+			//max-width: (1280/16rem)!important;
+			gap: 1rem;
+		}
+
+		.home-enquire-images-container {
+			justify-content: flex-start;
+		}
+
+		.img-card-overlay {
+			width: 90%;
+		}
+
+		.img-card-overlay-img {
+			aspect-ratio: 1 / 1.5 !important;
+			max-width: none;
+		}
+	}
+}
